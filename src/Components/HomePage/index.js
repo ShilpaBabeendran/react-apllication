@@ -117,7 +117,7 @@ const handlePriceChange = (e) => {
             <div className=' nav'>
                 <div className='nav-child-abc'>
                     <div className='abc-child'>
-                    <p>ABC</p>
+                    <p>ABC,,,,,,,,</p>
                     <p>PROPERTIES</p>
                     </div>
                     <p className='real-estate'>Your Perfect Real Estate Partner</p>
