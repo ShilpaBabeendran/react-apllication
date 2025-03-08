@@ -10,6 +10,28 @@
     /* height: 62px; */
     background-color: #F4835F;
 }
+
+
+/* responsive-said */
+
+@media (max-width: 600px){
+
+  .warning-banner{
+    padding: 20px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 .text-head-content{
     font-family: "Hind";
     font-size: 12px;
@@ -316,21 +338,6 @@ input{
 
 /* mobile view */
 
-@media (max-width: 600px){
-  .head-for-mobile{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* font-size: 12px; */
 
-  }
-  .text-h{
-    font-family: "Hind";
-    font-size: 10px;
-  }
-  .nav, .buy-rent, .nav-child-m,.nav-child-btn, .buy-or-rent,.pricing,.find,.input-right-icon,.mapp-newest{
-    display: none;
-  }
-}
 
   
