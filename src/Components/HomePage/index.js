@@ -23,6 +23,7 @@ import Switch from "../../assets/iconImages/Switch.jpg";
 
 
 
+
 // import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
 // import { IoLocationOutline } from "react-icons/io5";
 // import { BiBed, BiBath, BiCar } from "react-icons/bi";
