@@ -1,0 +1,58 @@
+
+
+.max-width{
+    /* max-width: 1800; */
+    margin-left: 30px;
+    margin-right: 30px;
+    /* margin: 0px auto; */
+}
+
+.absolute-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* gap: 60px; */
+}  
+
+.justify-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 50px; */
+}
+
+.detail-font{
+    font-family: 'Hind';
+    font-size: 10px;
+    font-weight: 400;
+    color: #192E40;
+}
+
+.font-family{
+    font-family: 'Hind';
+    font-size: 12px;
+    font-weight: 400;
+    color: #45525D;
+}
+.font-head{
+    font-family: 'Hind';
+    font-size: 16px;
+    font-weight: 700;
+    color: #45525E;
+}
+.flex{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* @media (max-width: 600px){
+    .head-for-mobile{
+      display: flex;
+      flex-direction: column;
+  
+    }
+  } */

@@ -1,0 +1,31 @@
+.luxuary-apartment{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #7D92A9;
+    border-radius: 10px;
+}
+
+
+.apartment{
+    padding: 10px;
+}
+
+.text-h{
+    font-family: "Hind";
+    font-size: 24px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+.text{
+    font-family: "Hind";
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.margin-arrange{
+    margin: 12px 0px;
+}
+
+
+

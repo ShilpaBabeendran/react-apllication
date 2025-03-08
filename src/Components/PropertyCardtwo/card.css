@@ -1,0 +1,37 @@
+.rigt-said{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5FBFF;
+    
+}
+
+
+.support-map{
+    font-family: "Hind";
+    font-size: 18px;
+    color: #2E96C6;
+}
+.para-map{
+    font-family: "Hind";
+    font-size: 16px;
+}
+
+/* button */
+.content-btn{
+    border: none;
+    background-color: #2E96C6;
+    /* width: 30%; */
+    padding: 20PX;
+    align-items: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+
+}
+
+.right-said-pos{
+    position: relative;
+    bottom:450px ;
+}

@@ -1,0 +1,336 @@
+
+/* .header{
+    background-color: #F4835F;
+} */
+.header{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 62px;
+    background-color: #F4835F;
+}
+.text-head-content{
+    font-family: "Hind";
+    font-size: 12px;
+    font-weight: 400;
+    /* line-height: 26.5px; */
+    color: #FFFFFF;
+}
+.more{
+    padding: 10PX;
+    border-radius: 35px;
+    width: 72px;
+    height: 25px;
+    font-size: 9px;
+    /* line-height: 26.5px; */
+    border: none;
+    
+}
+
+/* navigation */
+
+.nav {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 60px;
+    height: 102px;
+    padding: 10px;
+    box-shadow: 0 4px 2px -2px rgba(98, 97, 97, 0.2);
+  }
+  
+
+  /* nav abc */
+  .nav-child-abc {
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 10px;
+    line-height: 1px;
+  }
+  .abc-child{
+    font-family: 'Hind';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 4px;
+    color: #192E40;
+  }
+  .real-estate{
+    font-family: 'Hind';
+    font-weight: 300;
+    font-size: 8px;
+    color: #192E40;
+  }
+
+
+  /* nav-manu  */
+  
+  .nav-child-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Hind';
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .buy-rent {
+    margin-right: 20px; 
+    border-right: 4px solid rgb(161, 160, 160);
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Hind';
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .buy-rent p {
+    margin: 0 10px;
+  }
+  .rent{
+    color: #F4835F;
+  }
+  
+  .nav-child-m {
+    /* display: flex; */
+    gap: 30px;
+  }
+  
+  .nav-child-m p {
+    margin: 0 10px;
+  }
+  
+  .nav-child-btn {
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 128PX; */
+    /* height: 48px; */
+    border-radius: 58px;
+    background-color: #FEF8E7;
+    font-family: 'Hind';
+    font-size: 15px;
+    font-weight: 600;
+    color: #45525E;
+    padding: 15px;
+  }
+
+  /* taboption */
+.tab-options{
+    gap: 10px;
+    margin-top: 25PX;
+    /* height: 45px; */
+}
+  
+.buy-or-rent{
+    width: 196px;
+    /* height: 50px; */
+    border-radius: 10px;
+    /* margin-top: 25px; */
+    left: 60px;
+    /* right: 60px; */
+    gap: 50px;
+    background-color: #F1F1F3;
+    color: #192E40;
+    font-size: 15px;
+    font-weight: 400;
+    
+}  
+
+.rent-option{
+ background-color: #2E96C6;
+ color: #FFFFFF;
+ width: 96px;
+ /* height: 52px; */
+ border-radius: 8px;
+}
+
+input{
+    border: none;
+}
+.search-property {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* position: relative; */
+    width: 724px;
+    /* height: 50px; */
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    justify-content: space-between;
+    /* padding: 10PX; */
+    /* margin-top: 25PX; */
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-property.active-border {
+    border-color: #F4835F; 
+  }
+
+
+/* dropdown-box */
+.dropdown-box{
+    /* position: absolute; */
+    position: fixed;
+    margin-top: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20PX;
+    width: 724px;
+    height: 173px;
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius:10px ; */
+    border-radius: 10px;
+    background-color: #FFF7F5;
+}
+
+.pricing{
+    width: 220px;
+    padding: 17px;
+    /* height: 50px; */
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    justify-content: space-between;
+    /* margin-top: 25PX; */
+    background-color: #FFFFFF;
+}
+
+/* drop-down-box */
+
+.pricing-drop-down{
+    position: fixed;
+    margin-top: 280px;
+    /* left: 250ox; */
+    /* margin-right: 280px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20PX;
+    width: 220px;
+    height: 173px;
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius:10px ; */
+    border-radius: 10px;
+    background-color: #FFF7F5;
+}
+.pricing.active-border {
+    border-color: #F4835F; 
+  }
+
+  /* input */
+  .enter-amount{
+
+    padding: 10px;
+    border: 1px solid#F4835F;
+    border-radius: 8px;
+
+  }
+
+  .price-values{
+    display: flex;
+    gap: 70px;
+  }
+
+.find{
+    width: 220px;
+    padding: 21px;
+    /* height: 58px; */
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    /* justify-content: space-between; */
+    /* margin-top: 25PX; */
+    background-color: #ff916f
+}
+
+
+/* properties for rent */
+
+.properties-for-rent{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    margin-top: 25px;
+    /* margin-left: 60px; */
+    /* gap: 53%; */
+}
+
+.property-rent{
+    /* height: 55px; */
+    font-family: 'Hind';
+    font-weight: 700;
+    font-size: 25px;
+    color: #45525E;
+}
+.listing{
+    font-family: 'Hind';
+    font-size: 12px;
+    color: #45525E;
+}
+
+.mapp-newest{
+    font-family: 'Hind';
+    font-size: 15px;
+    /* height: 55px; */
+    gap: 8px;
+}
+.mapp, .newest{
+    padding: 10px;
+    width: 183px;
+    /* height: 55px; */
+    border: 1px solid#74788D;
+    border-radius: 10PX;
+    gap: 15PX;
+
+}
+
+
+
+
+
+/* card */
+.propertyCard{
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 65px;
+  width: 921px;
+  height: 307px;
+  background-color: #F1F1F3 60%;
+  border-radius: 16PX;
+  gap: 10px;
+}
+.image-slider{
+  width: 360px;
+}
+
+
+
+/* mobile view */
+
+@media (max-width: 600px){
+  .head-for-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* font-size: 12px; */
+
+  }
+  .text-h{
+    font-family: "Hind";
+    font-size: 10px;
+  }
+  .nav, .buy-rent, .nav-child-m,.nav-child-btn, .buy-or-rent,.pricing,.find,.input-right-icon,.mapp-newest{
+    display: none;
+  }
+}
+
+  
