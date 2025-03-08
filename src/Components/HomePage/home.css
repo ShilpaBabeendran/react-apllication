@@ -1,4 +1,6 @@
-
+body{
+  font-family: "Hind";
+}
 /* .header{
     background-color: #F4835F;
 } */
@@ -12,11 +14,11 @@
 }
 
 .warning-text{
-  font-family: "Hind";
+  /* font-family: "Hind"; */
   font-size: 12px;
   /* font-weight: 400; */
   /* line-height: 26.5px; */
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
 }
 
 .learn-more-btn{
