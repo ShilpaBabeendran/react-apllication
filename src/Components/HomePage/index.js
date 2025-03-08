@@ -115,7 +115,7 @@ const handlePriceChange = (e) => {
 
         
         <div className=" max-width main-container">
-            <div className=' nav'>
+            <div className=' nav d-none d-md-block'>
                 <div className='nav-child-abc'>
                     <div className='abc-child'>
                     <p>ABC</p>
@@ -144,7 +144,7 @@ const handlePriceChange = (e) => {
 
 
             <div className='absolute-center justify-content tab-options'>
-                <div className=' absolute-center buy-or-rent'>
+                <div className=' absolute-center buy-or-rent d-none d-md-block'>
                     <div className=' font-family buy-option'>Buy</div>
                     <div className=' font-family absolute-center rent-option'>Rent</div>
                 </div>
