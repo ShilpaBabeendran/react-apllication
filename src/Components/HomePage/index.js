@@ -5,6 +5,7 @@
 // import React from 'react'
 
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 // import "./commonClass.css"; 
 // import HomePage from "../HomePage";
 // import Header from "../Header";
