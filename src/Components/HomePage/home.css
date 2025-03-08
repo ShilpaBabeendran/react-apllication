@@ -2,12 +2,12 @@
 /* .header{
     background-color: #F4835F;
 } */
-.header{
-  display: flex;
+.warning-banner {
+  /* display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    height: 62px;
+    height: 62px; */
     background-color: #F4835F;
 }
 .text-head-content{
