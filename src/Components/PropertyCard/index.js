@@ -74,7 +74,7 @@ const PropertyCard = () => {
     <>
         <div className=" flex max-width property-body">
 
-            <div className="property-card-parent">
+            <div className="property-card-parent ">
 
                 {/* propwrty=card-1 */}
 
