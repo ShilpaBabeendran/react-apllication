@@ -43,9 +43,9 @@ body{
     flex-direction: column;
     padding: 20px;
   }
-  /* .nav,.buy-or-rent{
+  .nav,.buy-or-rent{
     display: none;
-  } */
+  }
   
 }
 
