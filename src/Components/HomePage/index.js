@@ -158,12 +158,12 @@ const handlePriceChange = (e) => {
                         </div>
                         {/* right icon click to show dropdown */}
                         <div className='input-right-icon' onClick={toggleDropdown}>
-                        <img className="absolute-center" src={vector}  alt="input-icon"/>
+                        <img className="absolute-center d-none d-md-block" src={vector}  alt="input-icon"/>
                         </div>
                         {/* <div className="search-property-dropdown-box"> */}
                         {/* dropdown-box */}
                         {showDropdown && (
-                            <div className="dropdown-box">
+                            <div className="dropdown-box d-none d-md-block">
                                 <div className="dropdown-item">City, Town, Texas</div>
                                 <div className="dropdown-item">Area</div>
                                 <div className="dropdown-item">Commercial, Rental</div>
@@ -172,7 +172,7 @@ const handlePriceChange = (e) => {
                 
                     </div>
 
-                <div className= {`absolute-center pricing  ${ifActive ? "active-border" : ""}`}
+                <div className= {`absolute-center pricing d-none d-md-block'  ${ifActive ? "active-border" : ""}`}
                     onClick={togglePriceBorder}>
                     <div className='price-text'>Price</div>
                     <div className='down-arrow' onClick={togglePriceDropdown}>
@@ -206,7 +206,7 @@ const handlePriceChange = (e) => {
                     )}
                     
                 </div>
-                <button className='font-family find'>Find</button>
+                <button className='font-family find d-none d-md-block '>Find</button>
             </div>
 
 
