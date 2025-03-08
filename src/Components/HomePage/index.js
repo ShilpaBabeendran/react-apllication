@@ -110,7 +110,7 @@ const handlePriceChange = (e) => {
 
         <div className='  warning-banner text-center'>
             <p className='warning-text ' style={{ color: "#FFFFFF", backgroundColor: "#F4835F", padding: "10PX" }}>Usage of Illegal Property Images to upload content showing area in non standard/Illegal units is prohibited</p>
-            <button className='learn-more-btn'style={{ backgroundColor: "#FFFFF", padding: "10px" }}>Learn More</button>
+            <button className='learn-more-btn'style={{ backgroundColor: "#FFFFF",  }}>Learn More</button>
         </div>
 
         

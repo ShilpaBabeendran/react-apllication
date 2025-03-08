@@ -39,6 +39,8 @@ body{
 @media (max-width: 600px){
 
   .warning-banner{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
   }
   
