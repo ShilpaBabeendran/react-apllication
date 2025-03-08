@@ -8,10 +8,10 @@ body{
    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
     gap: 5px;
     /* height: 62px; */
-    background-color: #F4835F;
+    /* background-color: #F4835F; */
 }
 
 .warning-text{
