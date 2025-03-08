@@ -43,6 +43,9 @@ body{
     flex-direction: column;
     padding: 20px;
   }
+  .nav{
+    display: none;
+  }
   
 }
 
