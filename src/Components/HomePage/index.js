@@ -109,7 +109,7 @@ const handlePriceChange = (e) => {
             {/* warnning banner */}
 
         <div className='  warning-banner text-center'>
-            <p className=' m-0'>Usage of Illegal Property Images to upload content showing area in non standard/Illegal units is prohibited</p>
+            <p className='warning-text m-0'>Usage of Illegal Property Images to upload content showing area in non standard/Illegal units is prohibited</p>
             <button className='learn-more-btn'>Learn More</button>
         </div>
 
