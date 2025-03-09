@@ -115,7 +115,7 @@ const handlePriceChange = (e) => {
 
         
         {/* <div className=" max-width main-container"> */}
-            <div className=' nav row d-none d-md-block'>
+            <div className='d-flex nav d-none d-md-block'>
                 <div className='col-md-4 nav-child-abc'>
                     <div className='abc-child'>
                     <p>ABC</p>
