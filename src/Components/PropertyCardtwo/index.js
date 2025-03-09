@@ -34,9 +34,9 @@ const PropertyCardtwo = () => {
 
         // <div>
 
-            <div className=" flex max-width property-body">
+            <div className=" flex max-width property-body ">
             
-                <div className="property-card-parent">
+                <div className="property-card-parent d-none d-md-block">
 
                 
                     {/* property card 2 */}
@@ -191,7 +191,7 @@ const PropertyCardtwo = () => {
             
             
             
-                        <aside className="rigt-said right-said-pos">
+                        <aside className="rigt-said right-said-pos d-none d-md-block">
                             <div className="said-content">
                                          
                                 <div className="said-content">
@@ -207,6 +207,74 @@ const PropertyCardtwo = () => {
                                  
                             </div>
                         </aside>
+
+
+                         {/* mobile view of card */}
+                                    
+        <div className="card-in-mobile-view" >
+            {[...Array(5)].map((_, index) => (
+                <div key={index} className=" property-card-mobile w-2/5 relative md:hidden bg-white shadow-lg rounded-lg overflow  d-block d-md-none">
+                    <img src={Image} alt="Property" className="bg-image w-full h-full object-cover"/>
+                    <div className=" flex image-top-bar" >
+                        <div className=" days absolute top-2 left-2  text-white px-2 py">
+                            <img src={Time} alt="Property" className="time"/>
+                            <p>Listed 5 Days ago</p>
+                        </div>
+                        <div className="verified absolute top-2 center-2 text-white px-2 py-1 text-xs rounded">
+                            <img src={Verified} alt="Property" className="verified"/>
+                            <p>Verified by Athirad</p>
+                        </div>
+                        <div className="headphone absolute top-2 right-2 text-white px-2 py-1 text-xs rounded">
+                            <img src={headphn} alt="Property" className="headohn"/>
+                        </div>
+            
+                    </div>
+        {/* Info */}
+                    <div className=" card-title p-4">
+                        <h2 className=" title text-xl font-semibold">VILLA 370 MIRA OASIS 1</h2>
+                        <div className=" flex price-text">
+                            <p className="price">2,50,190 </p>
+                            <p className="aed">AED YEARLY</p>
+                        </div>
+                        <p className=" flex items-center text-600"><img src={location} alt="loctin" className="location-icon"/> 118, Dubailand, Dubai, UAE</p>
+
+                        <div className=" flex status">
+                            <div className="for-rent">For Rent</div>
+                            <div className="spacing"></div>
+                            <div className="furnished">Vacant Now</div>
+                            <div className="spacing"></div>
+                            <div className="camera">Atharid Premium</div>                        
+                        </div>
+            {/* Icons */}
+                        <div className="flex property-info">
+                            <div className="flex facility">
+                                <img src={Bed} alt="bed" className="bed-icont"/>
+                                <p className="customer-suppor-text">Bedrooms</p>
+                            </div>
+                            <div className="flex facility">
+                                <img src={Bathrooms} alt="bath" className="bath-icont"/>
+                                <p className="customer-suppor-text">2 Bathrooms</p>
+                            </div>
+                            <div className="flex facility">
+                                <img src={Parking} alt="car" className="car-icont"/>
+                                <p className="customer-suppor-text">Parking available</p>
+                            </div>
+                            <div className="flex arrow">
+                                <img src={RightArrow} alt="arrow" className="arrow-icont"/>
+                            </div>
+                        </div>
+
+          {/* Buttons */}
+                        <div className="contact-etails">
+                            <button className="flex wtsapp">
+                                <img src={Whatsapp} alt="Whatsapp" className="Whatsapp-icont"/>
+                                <p className="whatsapp-text">WHATAPP</p>
+                            </button>   
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
 
 
 

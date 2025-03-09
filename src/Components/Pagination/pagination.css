@@ -23,11 +23,12 @@
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 768px){
 
-    .page-number-for-body{
+    page-number-for-body{
         display: flex;
         flex-direction: column;
     }
+    
 }
 

@@ -1,12 +1,14 @@
-.luxuary-apartment{
-    margin-left: 30px;
-    margin-right: 30px;
-    background-color: #7D92A9;
-    border-radius: 10px;
-}
+/* .luxuary-apartment{
+    /* margin-left: 10%; */
+    /* margin-right: 30px; */
+    
+/* }  */
 
 
 .apartment{
+    display: flex;
+    background-color: #7D92A9;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -24,8 +26,16 @@
 }
 
 .margin-arrange{
-    margin: 12px 0px;
+    margin: 30px 0px;
+}
+.design-img{
+    display: flex;
 }
 
 
+
+@media (max-width: 768px){
+
+
+}
 

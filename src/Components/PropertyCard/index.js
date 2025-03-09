@@ -72,13 +72,13 @@ const PropertyCard = () => {
 
 
     <>
-        <div className=" flex max-width property-body">
+        <div className=" flex max-width property-body ">
 
-            <div className="property-card-parent ">
+            <div className="property-card-parent d-none d-md-block ">
 
                 {/* propwrty=card-1 */}
 
-                <div className=" flex property-card">
+                <div className=" flex property-card ">
                     
                     {/* Property Image Section */}
 
@@ -178,7 +178,7 @@ const PropertyCard = () => {
                                     </div>
                                     <div className="flex features-customer-support">
                                         <img src={headphn} alt="headphn" className="headphn-icont"/>
-                                        <p className="customer suppor-text">Premium customer support</p>     
+                                        <p className="customer-suppor-text">Premium customer support</p>     
                                     </div>
                                 </div>
 
@@ -186,7 +186,7 @@ const PropertyCard = () => {
 
                                 <div className="flex square-ft">
                                     <img src={Mask} alt="mask" className="sqrft-icont"/>
-                                    <p className="customer suppor-text">1800.00 square ft</p>
+                                    <p className="customer-suppor-text">1800.00 square ft</p>
                                 </div>
                             </div>
 
@@ -194,15 +194,15 @@ const PropertyCard = () => {
                             <div className="flex property-info">
                                 <div className="flex facility">
                                     <img src={Bed} alt="bed" className="bed-icont"/>
-                                    <p className="customer suppor-text">Bedrooms</p>
+                                    <p className="customer-suppor-text">Bedrooms</p>
                                 </div>
                                 <div className="flex facility">
                                     <img src={Bathrooms} alt="bath" className="bath-icont"/>
-                                    <p className="customer suppor-text">2 Bathrooms</p>
+                                    <p className="customer-suppor-text">2 Bathrooms</p>
                                 </div>
                                 <div className="flex facility">
                                     <img src={Parking} alt="car" className="car-icont"/>
-                                    <p className="customer suppor-text">Parking available</p>
+                                    <p className="customer-suppor-text">Parking available</p>
                                 </div>
                                 <div className="flex arrow">
                                     <img src={RightArrow} alt="arrow" className="arrow-icont"/>
@@ -214,6 +214,14 @@ const PropertyCard = () => {
                     
                     </div>
                 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -369,195 +377,235 @@ const PropertyCard = () => {
 
 
 
-            <aside className="rigt-said-bar card-position-arrange ">
+            <aside className="rigt-said-bar card-position-arrange d-none d-md-block ">
                 <div className="right-said-content">
-                    <div className="filter">
-                        <div className="flex font-head filter-head">    
+                    {/* <div className="filter"> */}
+                        <div className="flex justify-content-between font-head type-head">    
                             <p className="filter-head">Filter</p>
                             <img src={Filter} alt="filter" className="bafilterth-icont"/>
                         </div>
-                        <div className=" font-family filter-body">
-                            <div className=" flex mark">
-                                <p className="mark">Mark already seen</p>
-                                <input type="checkbox" checked={filters.premiumType} onChange={() => setFilters({...filters, mpremiumTypearkSeen: !filters.premiumType})} />
+                        <div className=" custom-checkbox-group">
+                            <div class="form-check">
+                                <label class="form-check-lable ">Mark already seen </label>
+                                {/* <div class="form-check form-switch"> */}
+                                    <input class="form-check-input" type="checkbox" id="togglePhotos"/>
+                                {/* </div> */}
                             </div>
-                            <div className=" flex mark">
+                            {/* <div className=" flex mtik-mark-on-filterark">
                                 <p className="photos">Properties with photos</p>
-                                <input type="checkbox" checked={filters.apartmentsOnly} onChange={() => setFilters({...filters, apartmentsOnly: !filters.apartmentsOnly})} />
+                                <input type="checkbox" checked={filters.apartmentsOnly} onChange={() => setFilters ({...filters, apartmentsOnly: !filters.apartmentsOnly})} />
+                            </div> */}
+
+
+                            <div class="form-check">
+                                <label class="form-check-lable">Properties with photos</label>
+                                {/* <div class="form-check form-switch"> */}
+                                    <input class="form-check-input" type="checkbox" id="togglePhotos"/>
+                                {/* </div> */}
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
+
+
 
                         {/* completion status */}
-                    <div className="completion-status">
-                        <div className=" flex font-head completion-head">
+                    {/* <div className=" font-head type-head"> */}
+                        <div className=" flex justify-content-between font-head type-head">
                             <p className="completion">Completion Status</p>
                             <img src={Downarrow} alt="arrow" className="arrow-icont"/>
                         </div>
-                        <div className=" font-family completion-body">
-                            <div className="flex body-ready">
-                                <input type="radio" name="completion" checked={filters.completionStatus === "ready"} onChange={() => setFilters({...filters, completionStatus: "ready"})} />    
-                                <p className="ready">Ready</p>
+                        <div className=" custom-checkbox-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="propertyStatus" id="ready" checked/>
+                                <label class="form-check-label" for="ready">Ready</label>
                             </div>
-                            <div className="flex body-ready">
-                                <input type="radio" name="completion" checked={filters.completionStatus === "offplan"} onChange={() => setFilters({...filters, completionStatus: "offplan"})} />
-                                <p className="off-pln">Off-Plan</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="propertyStatus" id="offPlan"/>
+                                <label class="form-check-label" for="offPlan">Off-Plan</label>
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
+
+
+
+
+                    
+
 
 
                     {/* property type */}
-                    <div className="property-type">
-                        <div className="flex font-head type-head">    
-                            <p className="head-p">Property-Type</p>
-                            <img src={Downarrow} alt="arrow" className="arrow-icont"/>
+                    <div className=" flex justify-content-between font-head type-head">
+                        <p className="completion">Property Type</p>
+                        <img src={Downarrow} alt="arrow" className="arrow-icont"/>
+                    </div>
+                    <div class="custom-checkbox-group">
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="premium" checked/>
+                            <label class="form-check-label" for="premium">Premium</label>
                         </div>
-                        <div className=" font-family type-body">
-                            <div className=" property-check-box">
-                                <input type="checkbox" checked={filters.premiumType} onChange={() => setFilters({...filters, premiumType: !filters.premiumType})} />
-                                <p className="check-text">Premium</p>
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.apartmentsOnly} onChange={() => setFilters({...filters, apartmentsOnly: !filters.apartmentsOnly})} />
-                                <p className="check-text">Apartments</p>                       
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.readyMove} onChange={() => setFilters({...filters, readyMove: !filters.readyMove})} />
-                                <p className="check-text">Ready to Move</p>                      
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.individualHome} onChange={() => setFilters({...filters, individualHome: !filters.individualHome})} />
-                                <p className="check-text">Individual Home</p>                     
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.TownHouse} onChange={() => setFilters({...filters, TownHouse: !filters.TownHouse})} />
-                                <p className="check-text">Town House</p>                           
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.rentHouse} onChange={() => setFilters({...filters, rentHouse: !filters.rentHouse})} />
-                                <p className="check-text">Rent House</p>                          
-                            </div>
+
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="apartments"/>
+                            <label class="form-check-label" for="apartments">Apartments</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="readyToMove"/>
+                            <label class="form-check-label" for="readyToMove">Ready to move</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="individualHomes"/>
+                            <label class="form-check-label" for="individualHomes">Individual Homes</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="townhouse"/>
+                            <label class="form-check-label" for="townhouse">Townhouse</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="penthouse"/>
+                            <label class="form-check-label" for="penthouse">Penthouse</label>
                         </div>
                     </div>
 
 
                     {/* furnished */}
 
-                    <div className="property-type">
-                        <div className="flex font-head type-head">    
-                            <p className="head-p">Furnished Status</p>
-                            <img src={Downarrow} alt="arrow" className="arrow-icont"/>
-                        </div>
-                        <div className=" font-family type-body">
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.furnishedProperty} onChange={() => setFilters({...filters, furnishedProperty: !filters.furnishedProperty})} />
-                                <p className="check-text">Furnished</p>                         
+                    <div className=" flex justify-content-between font-head type-head">
+                                <p className="completion">Furnished Status</p>
+                                <img src={Downarrow} alt="arrow" className="arrow-icont"/>
                             </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.smiFurnished} onChange={() => setFilters({...filters, apartmentsOnly: !filters.apartmentsOnly})} />
-                                <p className="check-text">Semi-Furnished</p>                         
+                            <div class="custom-checkbox-group">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="premium" checked/>
+                                    <label class="form-check-label" for="premium">Furnished</label>
+                                </div>
+
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="apartments"/>
+                                    <label class="form-check-label" for="apartments">SemiFurnishe</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="readyToMove"/>
+                                    <label class="form-check-label" for="readyToMove"> Unfurnished</label>
+                                </div>
+
                             </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.unFurnished} onChange={() => setFilters({...filters, unFurnished: !filters.unFurnished})} />
-                                <p className="check-text">UnFurnished</p>                 
-                            </div>
-                        </div>
-                    </div>
 
 
                     {/* amenities */}
 
-                    <div className="property-type">
-                        <div className="flex font-head type-head">    
-                            <p className="head-p">Amenities</p>
-                            <img src={Downarrow} alt="arrow" className="arrow-icont"/>
-                        </div>
-                        <div className=" font-family type-body">
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.parkingFacility} onChange={() => setFilters({...filters, parkingFacility: !filters.parkingFacility})} />
-                                <p className="check-text">Parking Facitity</p>         
+                    {/* <div className="property-type"> */}
+                    <div className=" flex justify-content-between font-head type-head">
+                                <p className="completion">Amenities</p>
+                                <img src={Downarrow} alt="arrow" className="arrow-icont"/>
                             </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.securityStatus} onChange={() => setFilters({...filters, securityStatus: !filters.securityStatus})} />
-                                <p className="check-text">Security</p>            
+                            <div class="custom-checkbox-group">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="premium" checked/>
+                                    <label class="form-check-label" for="premium">Parking Fcility</label>
+                                </div>
+
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="apartments"/>
+                                    <label class="form-check-label" for="apartments">Gas Pipeline</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="readyToMove"/>
+                                    <label class="form-check-label" for="readyToMove">Security </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="individualHomes"/>
+                                    <label class="form-check-label" for="individualHomes">Lift Facility</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="townhouse"/>
+                                    <label class="form-check-label" for="townhouse">Power backup</label>
+                                </div>
+
                             </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.gasPipeline} onChange={() => setFilters({...filters, gasPipeline: !filters.gasPipeline})} />
-                                <p className="check-text">Gad Pipeline</p>           
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.liftFacility} onChange={() => setFilters({...filters, liftFacility: !filters.liftFacility})} />
-                                <p className="check-text">Lift Facity</p>           
-                            </div>
-                            <div className="property-check-box">
-                                <input type="checkbox" checked={filters.powerBackup} onChange={() => setFilters({...filters, powerBackup: !filters.powerBackup})} />
-                                <p className="check-text">Power Backup</p>                     
-                            </div>
-                        </div>
 
 
                         {/* BHK facility */}
 
 
-                        <div className="property-type">
-                            <div className=" flex font-head type-head">    
-                                <p className="head-p">BHK Facility</p>
+                        <div className=" flex justify-content-between font-head type-head">
+                                <p className="completion">BHK Facility</p>
                                 <img src={Downarrow} alt="arrow" className="arrow-icont"/>
                             </div>
-                            <div className="font-family type-body">
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.oneBhk} onChange={() => setFilters({...filters, oneBhk: !filters.oneBhk})} />
-                                    <p className="check-text">1BHK </p>        
+                            <div class="custom-checkbox-group">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="premium" checked/>
+                                    <label class="form-check-label" for="premium">1BHK</label>
                                 </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.twoBhk} onChange={() => setFilters({...filters, twoBhk: !filters.twoBhk})} />
-                                    <p className="check-text">2BHK</p>                 
+
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="apartments"/>
+                                    <label class="form-check-label" for="apartments">2BHK</label>
                                 </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.threeBhk} onChange={() => setFilters({...filters, threeBhk: !filters.threeBhk})} />
-                                    <p className="check-text">3BHK</p>         
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="readyToMove"/>
+                                    <label class="form-check-label" for="readyToMove">3BHK </label>
                                 </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.fourBhk} onChange={() => setFilters({...filters, fourBhk: !filters.fourBhk})} />
-                                    <p className="check-text">4BHK</p>             
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="individualHomes"/>
+                                    <label class="form-check-label" for="individualHomes">4BHK</label>
                                 </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.fiveBhk} onChange={() => setFilters({...filters, fiveBhk: !filters.fiveBhk})} />
-                                    <p className="check-text">5BHK</p>                                    
-                              </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.studioFacility} onChange={() => setFilters({...filters, studioFacility: !filters.studioFacility})} />
-                                    <p className="check-text">Studio</p>       
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="townhouse"/>
+                                    <label class="form-check-label" for="townhouse">5BHK</label>
                                 </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="townhouse"/>
+                                    <label class="form-check-label" for="townhouse">Studio</label>
+                                </div>
+
                             </div>
-                        </div>
 
 
                         {/* bathrooms */}
 
-                        <div className="property-type">
-                            <div className="flex font-head type-head">    
-                                <p className="head-p">Bathrooms</p>
+                        <div className=" flex justify-content-between font-head type-head">
+                                <p className="completion">Bathrooms</p>
                                 <img src={Downarrow} alt="arrow" className="arrow-icont"/>
                             </div>
-                            <div className="font-family type-body">
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.premiumType} onChange={() => setFilters({...filters, premiumType: !filters.premiumType})} />
-                                    <p className="check-text">1</p>                              
+                            <div class="custom-checkbox-group">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="premium" checked/>
+                                    <label class="form-check-label" for="premium">1</label>
                                 </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.apartmentsOnly} onChange={() => setFilters({...filters, apartmentsOnly: !filters.apartmentsOnly})} />
-                                    <p className="check-text">2</p>
+
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="apartments"/>
+                                    <label class="form-check-label" for="apartments">2</label>
                                 </div>
-                                <div className="property-check-box">
-                                    <input type="checkbox" checked={filters.readyMove} onChange={() => setFilters({...filters, readyMove: !filters.readyMove})} />
-                                    <p className="check-text">3</p>                       
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="readyToMove"/>
+                                    <label class="form-check-label" for="readyToMove">3 </label>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
+                    {/* </div> */}
 
 
                 </div>
@@ -582,6 +630,77 @@ const PropertyCard = () => {
 
 
 
+        {/* mobile view of card */}
+                                    
+        <div className="card-in-mobile-view" >
+            {[...Array(5)].map((_, index) => (
+                <div key={index} className=" property-card-mobile w-2/5 relative md:hidden bg-white shadow-lg rounded-lg overflow  d-block d-md-none">
+                    <img src={Image} alt="Property" className="bg-image w-full h-full object-cover"/>
+                    <div className=" flex image-top-bar absolute top-8 left-2" >
+                        <div className=" days    text-white px-2 py">
+                            <img src={Time} alt="Property" className="time"/>
+                            <p>Listed 5 Days ago</p>
+                        </div>
+                        <div className="verified  top-2 center-2 text-white px-2 py-1 text-xs rounded">
+                            <img src={Verified} alt="Property" className="verified"/>
+                            <p>Verified by Athirad</p>
+                        </div>
+                        <div className="headphone  top-2 right-2 text-white px-2 py-1 text-xs rounded">
+                            <img src={headphn} alt="Property" className="headohn"/>
+                        </div>
+            
+                    </div>
+        {/* Info */}
+                    <div className=" card-title p-4">
+                        <h2 className=" title text-xl font-semibold">VILLA 370 MIRA OASIS 1</h2>
+                        <div className=" flex price-text">
+                            <p className="price">2,50,190 </p>
+                            <p className="aed">AED YEARLY</p>
+                        </div>
+                        <p className=" flex items-center text-600"><img src={location} alt="loctin" className="location-icon"/> 118, Dubailand, Dubai, UAE</p>
+
+                        <div className=" flex status">
+                            <div className="for-rent">For Rent</div>
+                            <div className="spacing"></div>
+                            <div className="furnished">Vacant Now</div>
+                            <div className="spacing"></div>
+                            <div className="camera">Atharid Premium</div>                        
+                        </div>
+            {/* Icons */}
+                        <div className="flex property-info">
+                            <div className="flex facility">
+                                <img src={Bed} alt="bed" className="bed-icont"/>
+                                <p className="customer-suppor-text">Bedrooms</p>
+                            </div>
+                            <div className="flex facility">
+                                <img src={Bathrooms} alt="bath" className="bath-icont"/>
+                                <p className="customer-suppor-text">2 Bathrooms</p>
+                            </div>
+                            <div className="flex facility">
+                                <img src={Parking} alt="car" className="car-icont"/>
+                                <p className="customer-suppor-text">Parking available</p>
+                            </div>
+                            <div className="flex arrow">
+                                <img src={RightArrow} alt="arrow" className="arrow-icont"/>
+                            </div>
+                        </div>
+
+          {/* Buttons */}
+                        <div className="contact-etails">
+                            <button className="flex wtsapp">
+                                <img src={Whatsapp} alt="Whatsapp" className="Whatsapp-icont"/>
+                                <p className="whatsapp-text">WHATAPP</p>
+                            </button>   
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+
+
+
+
                         <LuxuryApartments/>
 
 
@@ -597,7 +716,15 @@ const PropertyCard = () => {
 
 
 
+   
+      
+         
 
+
+
+
+
+              
 
 
 

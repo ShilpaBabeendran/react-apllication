@@ -14,10 +14,10 @@ const LuxuryApartments = () => {
     <div>
 
 
-        <div className=" luxuary-apartment margin-arrange">
-            <div className="flex max-width apartment">
+        {/* <div className=" max-width luxuary-apartment margin-arrange"> */}
+            <div className=" max-width  apartment">
               <div className="apartment-Ddetails">
-                <h2 className="text-h">Luxury Apartments</h2>
+                <h3 className="text-h">Luxury Apartments</h3>
                   <p className="text">Situated in prestigious and desirable locations, offering breathtaking views, proximity to upscale neighborhoods, and convenient access to amenities such as shopping, dining, and cultural attractions</p>
                 <div className=" design-tik">
                   <div className="flex design">
@@ -34,8 +34,8 @@ const LuxuryApartments = () => {
                 </button>
               </div>
 
-              <div className="flex design-img">
-                <div className="img-one">
+              <div className=" design-img d-none d-md-block">
+                <div className=" flex img-one">
                   <div className="img-a">
                   <img src={Light} alt=""/>
                     
@@ -61,7 +61,7 @@ const LuxuryApartments = () => {
             </div>
                 
 
-        </div>
+        {/* </div> */}
 
 
 

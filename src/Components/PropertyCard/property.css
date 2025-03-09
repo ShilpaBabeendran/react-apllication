@@ -246,6 +246,7 @@
 
 aside{
     width: 30%;
+    /* gap: 20px; */
     /* padding-left: 15px; */
     /* margin-left: 15px; */
     float: right;
@@ -255,17 +256,21 @@ aside{
     border-radius: 10px;
 }
 
+/* .filter-body{
+    background-color: "none";
+}
+
 
 .completion-head, .filter-head{
     justify-content: space-between;
-}
+} */
 
 
 /* property type */
-.property-check-box{
+/* .property-check-box{
     display: flex;
     gap: 10px;
-}
+/* } */
 
 .type-head{
     border-bottom: 1px solid #74788D;
@@ -276,11 +281,80 @@ aside{
 
 .card-position-arrange{
     position: relative;
-    bottom: 47px;
+    bottom: 298px;
 }
 
 .martop2p{
     margin-top: 1%;
 
 }
+
+
+
+.custom-checkbox-group{
+    margin-bottom: 10px;
+    
+}
+
+
+
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+/* Custom Checkbox Styling */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #d1d5db;
+    transition: all 0.3s;
+}
+
+/* Checked State */
+.form-check-input:checked {
+    background-color: #18a582; /* Green color */
+    border-color: #18a582;
+}
+
+/* Label Styling */
+.form-check-label, .form-check-lable {
+    font-size: 16px;
+    color: #6c757d;
+    margin-left: 10px;
+}
+
+
+
+
+/* mobile view............. */
+@media (max-width: 768px) {
+    .property-info{
+        font-family: "Hind";
+        font-size: 12px;
+    }
+    .card-in-mobile-view{
+        gap: 10PX;
+    }
+    .card-in-mobile-view{
+        border-radius: 15PX;
+        background-color: #F1F1F3;
+    }
+
+    .property-card-mobile{
+        position: relative;
+    }
+    .image-top-bar{
+        position: absolute;
+    }
+
+
+}
+
+
+
 

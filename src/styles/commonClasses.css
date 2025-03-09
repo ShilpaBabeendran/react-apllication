@@ -31,7 +31,7 @@
 
 .font-family{
     font-family: 'Hind';
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     color: #45525D;
 }
@@ -45,6 +45,15 @@
     display: flex;
     /* justify-content: center; */
     align-items: center;
+    gap: 20px;
+}
+
+.filter-position-arrange{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding: 2px; */
+    padding: 10px;
     gap: 20px;
 }
 

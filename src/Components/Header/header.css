@@ -27,12 +27,16 @@
    
  }
 
- @media (max-width: 600px){
+ @media (max-width: 768px){
 
     .warning-banner{
       display: flex;
       flex-direction: column;
       padding: 20px;
+    }
+    .warning-text{
+        font-family: "Hind";
+        font-size: 12px;
     }
     /* .nav,.buy-or-rent{
       display: none;
