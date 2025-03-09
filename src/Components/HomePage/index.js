@@ -109,32 +109,36 @@ const handlePriceChange = (e) => {
 
          
                  <Header/>
+
+                <div className="container-fluid d-none d-md-block py-3">
         
-        {/* <div className=" max-width main-container"> */}
-            <div className="d-flex justify-content-between  nav d-none d-md-block">
-                <div className=' nav-child-abc'>
-                    <div className='abc-child'>
-                    <p>ABC</p>
-                    <p>PROPERTIES</p>
+                <div className=" row align-items-center">
+                    <div className="col-md-3 d-flex flex-column text-start nav">
+                        {/* <div className=' nav-child-abc'> */}
+                            <div className='col-md-3 d-flex flex-column text-start abc-child'>
+                            <p className="fw-bold fs-5">ABC</p>
+                            <p className="fw-bold fs-5">PROPERTIES</p>
+                            </div>
+                            <p className='text-muted small real-estate'>Your Perfect Real Estate Partner</p>
+                        </div>
+                        <div className='col-md-6 text-center  nav-child-menu'>
+                            <div className=' d-flex justify-content-center gap-3 absolute-center buy-rent'>
+                                <p className="fw-bold mb-0">Buy</p>
+                                <p className=' fw-bold mb-0 rent' style={{color:"#F4835F"}}>Rent</p>
+                            </div>
+                            <div className=' d-flex justify-content-center flex-wrap gap-3 mt-2 nav-child-m'>
+                            <p className="mb-0"> Navigators Edge </p>
+                            <p className="mb-0"> Our Agent</p>
+                            <p className="mb-0">Blogs & Insights</p>
+                            <p className="mb-0">New Launges</p>
+                            <p className="mb-0">About Us</p>
+                            <p className="mb-0">Help & Support</p>
+                            </div>
+                        </div>
+                        <div className='col-md-3 text-end nav-child-btn'>Sell Property</div>
                     </div>
-                    <p className='real-estate'>Your Perfect Real Estate Partner</p>
                 </div>
-                <div className=' nav-child-menu'>
-                    <div className=' absolute-center buy-rent'>
-                        <p>Buy</p>
-                        <p className='rent'>Rent</p>
-                    </div>
-                    <div className=' absolute-center nav-child-m'>
-                    <p> Navigators Edge </p>
-                    <p> Our Agent</p>
-                    <p>Blogs & Insights</p>
-                    <p>New Launges</p>
-                    <p>About Us</p>
-                    <p>Help & Support</p>
-                    </div>
-                </div>
-                <div className=' nav-child-btn'>Sell Property</div>
-            </div>
+                {/* </div> */}
 
 
 
