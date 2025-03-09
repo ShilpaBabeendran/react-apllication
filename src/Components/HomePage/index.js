@@ -116,14 +116,14 @@ const handlePriceChange = (e) => {
         
         {/* <div className=" max-width main-container"> */}
             <div className='d-flex nav d-none d-md-block'>
-                <div className='col-md-4 nav-child-abc'>
+                <div className=' nav-child-abc'>
                     <div className='abc-child'>
                     <p>ABC</p>
                     <p>PROPERTIES</p>
                     </div>
                     <p className='real-estate'>Your Perfect Real Estate Partner</p>
                 </div>
-                <div className='col-md-4  nav-child-menu'>
+                <div className=' nav-child-menu'>
                     <div className=' absolute-center buy-rent'>
                         <p>Buy</p>
                         <p className='rent'>Rent</p>
@@ -137,7 +137,7 @@ const handlePriceChange = (e) => {
                     <p>Help & Support</p>
                     </div>
                 </div>
-                <div className='col-md-4 nav-child-btn'>Sell Property</div>
+                <div className=' nav-child-btn'>Sell Property</div>
             </div>
 
 
