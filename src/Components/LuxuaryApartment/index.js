@@ -12,7 +12,7 @@ const LuxuryApartments = () => {
   return (
 
     
-    <div>
+    <>
 
 
        
@@ -23,7 +23,7 @@ const LuxuryApartments = () => {
 
 
         {/* <div className="container my-5"> */}
-      <div className=" max-width luxury-card p-4 d-flex flex-column flex-lg-row align-items-center">
+      <div className=" max-width luxury-card p-4 d-flex flex-column flex-lg-row align-items-center ">
         {/* Left Side: Text Content */}
         <div className="text-section text-light text-lg-start text-center">
           <h3 className="fw-bold">Luxury Apartments</h3>
@@ -42,7 +42,7 @@ const LuxuryApartments = () => {
         {/* Right Side: Illustration */}
         {/* <div className="image-section"> */}
         <div className="d-flex  image-section ">
-                <div className=" img-one">
+                <div className=" img-one d-none d-md-block ">
                   <div className="img-a">
                   <img src={Light} alt=""/>
                     
@@ -52,13 +52,13 @@ const LuxuryApartments = () => {
                     
                   </div>
                 </div>
-                <div className="img-two">
+                <div className="img-two d-none d-md-block ">
                   {/* <div className="img-c"> */}
                   <img src={Window} alt=""/>
                     
                   {/* </div> */}
                 </div>
-                <div className="img-three">
+                <div className="img-three d-none d-md-block ">
                   {/* <div className="img-d"> */}
                   <img src={Flower} alt=""/>
                     
@@ -72,8 +72,33 @@ const LuxuryApartments = () => {
 
 
 
+
+
+mobile view............
+
+
+      {/* <div className=" max-width luxury-card p-4 d-flex flex-column flex-lg-row align-items-center">
+        
+        <div className="text-section text-light text-lg-start text-center">
+          <h3 className="fw-bold">Luxury Apartments</h3>
+          <p>
+            Situated in prestigious and desirable locations, offering breathtaking
+            views, proximity to upscale neighborhoods, and convenient access to
+            amenities such as shopping, dining, and cultural attractions.
+          </p>
+          <ul className="list-unstyled">
+            <li>✔ Designer Finishes</li>
+            <li>✔ Spacious Layouts</li>
+          </ul>
+          <button className="btn btn-light mt-3">Explore Apartments</button>
+        </div>
+      </div> */}
+
+
+
+
       
-    </div>
+    </>
   );
 };
 
