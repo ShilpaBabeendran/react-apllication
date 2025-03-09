@@ -112,7 +112,7 @@ const handlePriceChange = (e) => {
 
                     {/* <div className="container"> */}
         
-                    <div className=" nav-container" style={{boxShadow:" 0 4px 2px -2px rgba(98, 97, 97, 0.2);"}}>
+                    <div className=" nav-container">
                         <div className=" max-width nav">
                             <div className=' nav-child-abc'>
                                 <div className='abc-child'>
