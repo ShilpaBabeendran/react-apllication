@@ -57,7 +57,9 @@
 
 
 @media (max-width: 768px){
-
+    .image-section {
+        display: none;
+    }
 
 }
 

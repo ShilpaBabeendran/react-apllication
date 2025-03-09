@@ -41,7 +41,7 @@ const LuxuryApartments = () => {
 
         {/* Right Side: Illustration */}
         {/* <div className="image-section"> */}
-        <div className="d-flex  image-section d-none d-md-block ">
+        <div className="d-flex  image-section ">
                 <div className=" img-one">
                   <div className="img-a">
                   <img src={Light} alt=""/>
