@@ -46,6 +46,9 @@
     .text-section {
       max-width: 100%;
     }
+    .image-section{
+        display: none;
+    }
   }
   
 

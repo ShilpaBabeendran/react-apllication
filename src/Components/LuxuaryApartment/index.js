@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Components/LuxuaryApartment/apartment.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import Tik from "../../assets/iconImages/tik.png";
 import Light from "../../assets/iconImages/light.png";
@@ -40,7 +41,7 @@ const LuxuryApartments = () => {
 
         {/* Right Side: Illustration */}
         {/* <div className="image-section"> */}
-        <div className="d-flex  image-section ">
+        <div className="d-flex  image-section d-none d-md-block ">
                 <div className=" img-one">
                   <div className="img-a">
                   <img src={Light} alt=""/>
