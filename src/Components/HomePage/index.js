@@ -16,6 +16,7 @@ import search from "../../assets/iconImages/search.jpg";
 import vector from "../../assets/iconImages/Vector.jpg";
 import Charecter from "../../assets/iconImages/down-arrow 2.jpg";
 import Switch from "../../assets/iconImages/Switch.jpg";
+import Header from "../Header";
 // import Image from "../../assets/iconImages/card-img.png";
 // import Wtsap from "../../assets/iconImages/wtsap.jpg";
 // import phone from "../../assets/iconImages/phone.jpg";
@@ -106,13 +107,8 @@ const handlePriceChange = (e) => {
     
     <>
 
-            {/* warnning banner */}
-
-        <div className='  warning-banner text-center' style={{backgroundColor: "#F4835F", padding: "10PX" }}>
-            <p className='warning-text ' style={{ color: "#FFFFFF", }}>Usage of Illegal Property Images to upload content showing area in non standard/Illegal units is prohibited</p>
-            <button className='learn-more-btn'style={{ backgroundColor: "#FFFFF",  }}>Learn More</button>
-        </div>
-
+         
+                 <Header/>
         
         {/* <div className=" max-width main-container"> */}
             <div className='d-flex nav d-none d-md-block'>
