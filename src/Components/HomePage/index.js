@@ -111,7 +111,7 @@ const handlePriceChange = (e) => {
                  <Header/>
         
         {/* <div className=" max-width main-container"> */}
-            <div className='d-flex nav d-none d-md-block'>
+            <div className="d-flex justify-content-between  nav d-none d-md-block">
                 <div className=' nav-child-abc'>
                     <div className='abc-child'>
                     <p>ABC</p>
