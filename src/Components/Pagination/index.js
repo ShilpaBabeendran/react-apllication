@@ -98,6 +98,14 @@ const Pagination = ({ totalPages = 10 }) => {
 
 
 
+
+
+
+
+
+
+
+
       
 
     </div>
