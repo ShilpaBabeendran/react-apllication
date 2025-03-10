@@ -94,11 +94,10 @@ body{
 
 .tab-options{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* gap: 10px; */
-  margin-top: 30px;
-  /* height: 50PX; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: 35px;
 }
 
 
@@ -138,11 +137,11 @@ body{
 input{
   border: none;
 }
-.search-container {
+/* .search-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background-color: white;
   padding: 8px;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -150,6 +149,30 @@ input{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   
+} */
+ .search-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* position: relative; */
+  border: 1px solid #ddd;
+  /* cursor: pointer; */
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  /* width: 60%; */
+    padding: 20px;
+}
+.before-click-search{
+  display: flex;
+  justify-content: space-between;
+  gap: 426px;
+}
+
+
+
+.search-icon-and-inputbox{
+  display: flex;
 }
 
 .search-box {
@@ -172,27 +195,37 @@ input{
 
 .search-input {
   border: none;
-  outline: none;
-  flex-grow: 1;
-  font-size: 16px;
+  /* flex-grow: 1;
+  font-size: 16px; */
 }
 
 .search-settings {
-  color: #f5a189;
-  cursor: pointer;
+  input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    accent-color: #f5a48b;
+  }
 }
 
 .dropdown-content {
-  width: 400px;
-  background: #fff7f2;
+ 
+
+  width: 48%;
+  background: #fff7f4;
+  border-radius: 0 0 10px 10px;
   padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #f5a189;
+  border: 1px solid #f5a48b;
+  border-top: none;
+  text-align: center;
+  position: absolute;
+  top: 255px;
+  left: 210px;
 }
 
 .dropdown-content p {
   display: flex;
   align-items: center;
+ 
   font-size: 14px;
   padding: 8px 0;
 }
@@ -216,7 +249,7 @@ input{
 
 .pricing-property{
   display: flex;
-    justify-content: space-bet
+    justify-content: space-between;
 }
 
 .price-filter-container {
@@ -230,7 +263,7 @@ input{
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   width: 15%;
-    padding: 8px;
+    padding: 20px;
 }
 
 .pricing.active-border {
@@ -238,19 +271,22 @@ input{
   border-radius: 10px 10px 0 0;
 }
 
-.down-arrow {
+/* .down-arrow {
   color: #aaa;
   font-size: 14px;
-}
+} */
 
 .pricing-drop-down {
-  width: 100%;
+  width: 14%;
   background: #fff7f4;
   border-radius: 0 0 10px 10px;
   padding: 15px;
   border: 1px solid #f5a48b;
   border-top: none;
   text-align: center;
+  position: absolute;
+  right: 310px;
+  top: 36%;
 }
 
 .price-value {

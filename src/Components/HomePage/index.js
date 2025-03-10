@@ -6,7 +6,7 @@
 
 import React, { useState } from "react";
 // import React, { useState } from "react";
-import { Form, InputGroup, FormControl, Button, Dropdown, DropdownButton, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
+// import { Form, InputGroup, FormControl, Button, Dropdown, DropdownButton, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
 import { FaSearch, FaCompass } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
 // import "./commonClass.css"; 
@@ -24,6 +24,11 @@ import Header from "../Header";
 import Commercial from "../../assets/iconImages/commercial.png";
 import City from "../../assets/iconImages/city.png";
 import Area from "../../assets/iconImages/area.png";
+
+
+
+
+// import { Form, InputGroup, Dropdown, ListGroup } from "react-bootstrap";
 
 
 // import { Form, InputGroup, FormControl, Button, Dropdown, DropdownButton } from "react-bootstrap";
@@ -69,9 +74,12 @@ const HomePage = ()=>{
 // const [activeTab, setActiveTab] = useState("Rent");
 // const [isExpanded, setIsExpanded] = useState(false);
 
+// const [showDropdown, setShowDropdown] = useState(false);
+
+
 const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleDropdown = () => {
+  const toggleBorder = () => {
     setIsExpanded(!isExpanded);
   };
 
@@ -80,10 +88,10 @@ const [isExpanded, setIsExpanded] = useState(false);
 
 // pricing drop down
 
-const [priceDropdown, setPriceDropdown] = useState(false);
-const togglePriceDropdown = () =>{
-    setPriceDropdown (!priceDropdown);
-};
+// const [priceDropdown, setPriceDropdown] = useState(false);
+// const togglePriceDropdown = () =>{
+//     setPriceDropdown (!priceDropdown);
+// };
 
 // // border
     const [ifActive, setClickActive]= useState(false);
@@ -165,42 +173,46 @@ const handlePriceChange = (e) => {
 
 
                      {/*search input ....................  */}
-                     <div className="search-container">
-                            <div
-                                className={`search-box ${isExpanded ? "expanded" : ""}`}
-                                onClick={toggleDropdown}
-                            >
-                                <img src={search} alt="search" className="search-icon" />
-                                <input
+                     
+
+
+
+
+                <div className="search-container ">
+                    <div className="before-click-search ">
+                        
+                        <div className="search-icon-and-inputbox ">
+                            <img src={search} alt="search" className= {`"search-icon" ${isExpanded ? "expand" : ""}`}
+                                onClick={toggleBorder}/>
+                            {/* </InputGroup.Text> */}
+                            <input className="searchinpur"
                                 type="text"
-                                placeholder="Search property"
-                                className="search-input"
-                                readOnly
-                                />
-                                
-                            </div>
-                            <img src={vector} alt="vector" className="search-icon" />
+                                placeholder="Search property" 
 
-
-
-                            
-
-
-
-                            {isExpanded && (
-                                <div className="dropdown-content">
-                                    <div className="dropdown-item">
-                                        <p><img src={City} alt="city" className="icon" /> City, Towns, Texas</p>
-                                    </div>
-                                    <div className="dropdown-item">                                
-                                         <p><img src={Area} alt="area" className="icon" /> Areas</p>                                    
-                                    </div>
-                                    <div className="dropdown-item">                                 
-                                        <p><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</p>
-                                    </div>
-                                </div>
-                            )}
+                            />               
                         </div>
+                        {/* <div className="location-tracker"> */}
+                            <img src={vector} alt="vector" className="search-icon" />
+                        {/* </div> */}
+                    </div>
+
+
+                </div>
+                {isExpanded && (
+                        <div className="dropdown-content ">
+                            <div className="dropdown-item">
+                                <p><img src={City} alt="city" className="icon" /> City, Towns, Texas</p>
+                            </div>
+                            <div className="dropdown-item">                                
+                                    <p><img src={Area} alt="area" className="icon" /> Areas</p>                                    
+                            </div>
+                            <div className="dropdown-item">                                 
+                                <p><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</p>
+                            </div>   
+                        </div>
+                    )}
+
+
 
 
 
@@ -209,19 +221,24 @@ const handlePriceChange = (e) => {
 
                      {/* pricing............ */}
                         <div className="price-filter-container d-none d-md-block">
-                                {/* <div className= "pricing-input"> */}
-                                        <div className={` 'pricing-property '  ${ifActive ? "active-border" : ""}`}
-                                            onClick={togglePriceBorder}>
-                                            <div className='price-text'>Price</div>
-                                            <div className='down-arrow' >
-                                                <img className="down-arrow" src={Charecter} alt="downarrow" onClick={togglePriceDropdown}/>
-                                            </div>
-                                        </div>
-                                {/* </div> */}
+                                
+                            <div className= 'pricing-property '  >
+                                <div className='price-text'>Price</div>
+                                <div className={`'down-arrow' ${ifActive ? "active-border" : ""}`}
+                                    onClick={togglePriceBorder} >
+                                    <img className="down-arrow" src={Charecter} alt="downarrow" />
+                                </div>
+                            </div>
+                               
 
 
-                            {/* drop-down-box */}
-                            {ifActive && (
+                            
+
+                    
+                            
+                        </div>
+                        {/* drop-down-box */}
+                        {ifActive && (
                                 <div className="pricing-drop-down">
                                     <h3>{price}</h3> {/* Display the current price */}
                 
@@ -244,10 +261,6 @@ const handlePriceChange = (e) => {
                                     <input className="price-input" type="number" placeholder="Enter Amount in AED" />
                                 </div>
                             )}
-
-                    
-                            
-                        </div>
                         <button className='font-family find d-none d-md-block '>Find</button>
                     </div>
 
