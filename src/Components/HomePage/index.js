@@ -177,8 +177,9 @@ const handlePriceChange = (e) => {
                                 className="search-input"
                                 readOnly
                                 />
-                                <img src={vector} alt="vector" className="search-icon" />
+                                
                             </div>
+                            <img src={vector} alt="vector" className="search-icon" />
 
 
 
@@ -209,7 +210,7 @@ const handlePriceChange = (e) => {
                      {/* pricing............ */}
                         <div className="price-filter-container d-none d-md-block">
                                 {/* <div className= "pricing-input"> */}
-                                        <div className={` 'pricing d-flex'  ${ifActive ? "active-border" : ""}`}
+                                        <div className={` 'pricing-property '  ${ifActive ? "active-border" : ""}`}
                                             onClick={togglePriceBorder}>
                                             <div className='price-text'>Price</div>
                                             <div className='down-arrow' >
@@ -244,32 +245,17 @@ const handlePriceChange = (e) => {
                                 </div>
                             )}
 
-
-
-
-
-
-
-
-                            
+                    
                             
                         </div>
                         <button className='font-family find d-none d-md-block '>Find</button>
                     </div>
 
                     {/* Price Dropdown */}
-        
-
-
-
-
-                
-      
-
-
+ 
                                     {/* properties for rent in UAE */}
 
-                        <div className=".max-width properties-for-rent">
+                        <div className=".max-width mrleft-2 properties-for-rent">
                             <div className="properties">
                                 <div className="property-rent">Properties for Rent in United Arab Emirates</div>
                                 <div className="listing">10 Listings</div>

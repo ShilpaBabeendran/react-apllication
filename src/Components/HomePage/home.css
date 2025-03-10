@@ -96,9 +96,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  /* gap: 10px; */
   margin-top: 30px;
-  height: 50PX;
+  /* height: 50PX; */
 }
 
 
@@ -106,27 +106,30 @@ body{
 
  .toggle-container {
   background-color: #f4f4f6; /* Light grey background */
-  padding: 5px;
+  /* padding: 12px; */
   border-radius: 12px;
   display: flex;
-  /* width: 180px;  */
+  width: 122px; 
 }
 
 .toggle-btn {
   flex: 1;
   border: none;
   background: none;
-  padding: 10px;
+  /* padding: 2px; */
   font-size: 16px;
   font-weight: 500;
   color: #333;
   border-radius: 10px;
   transition: 0.3s;
+  height: 70px;
 }
 
 .toggle-btn.active {
   background-color: #2E96C6; /* Blue background for active */
   color: white;
+  
+  /* width: 100px; */
 }
 
 
@@ -137,13 +140,15 @@ input{
 }
 .search-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
   border: 1px solid #ddd;
-  /* cursor: pointer; */
+  width: 60%;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
-  border-radius: 8px;
   
 }
 
@@ -202,24 +207,30 @@ input{
 
 
 
-.price-filter-container {
+/* .price-filter-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 250px;
+} */
+
+.pricing-property{
+  display: flex;
+    justify-content: space-bet
 }
 
-.pricing {
+.price-filter-container {
+
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background: white;
-  padding: 12px;
-  border-radius: 10px;
+  gap: 10px;
   border: 1px solid #ddd;
-  width: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  width: 15%;
+    padding: 8px;
 }
 
 .pricing.active-border {
@@ -263,12 +274,14 @@ input[type="range"] {
 
 .price-input {
   /* width: 100%; */
-  padding: 50px;
+  padding: 18px;
   border: 1px solid #f5a48b;
   border-radius: 10px;
   text-align: center;
+  justify-content: center;
   background: #fff;
   color: #777;
+  cursor: pointer;
 }
 
 
@@ -381,7 +394,7 @@ input[type="range"] {
     /* height: 55px; */
     gap: 8px;
 }
-.mapp, .newest{
+.mapp {
     padding: 10px;
     width: 183px;
     /* height: 55px; */
@@ -389,6 +402,15 @@ input[type="range"] {
     border-radius: 10PX;
     gap: 15PX;
 
+}
+.newest{
+  padding: 10px;
+    width: 183px;
+    /* height: 55px; */
+    border: 1px solid#74788D;
+    border-radius: 10PX;
+    gap: 15PX;
+    box-shadow:#74788D ;
 }
 
 
@@ -418,6 +440,10 @@ input[type="range"] {
 /* responsive-said */
 
 @media (max-width: 768px){
+
+  body{
+    width: 100%;
+  }
   .nav-container,.rent-and-buy,.toggle-container, .map-view{
     display: none;
   }

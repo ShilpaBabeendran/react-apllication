@@ -36,13 +36,18 @@
 }
 
 .days{
+    /* display: flex;
+    align-items: center; */
     background-color: rgba(35, 34, 34, 0.44);
     backdrop-filter: blur(10px); /* Applies blur effect */
     color: #ffffff;
     font-family: "Hind";
     font-size: 12px;
-    gap: 10px;
+    align-items: center;
+    /* gap: 10px; */
     padding: 5px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     
 }
 .verified{
@@ -57,7 +62,9 @@
 .headphone{
     background-color: #FFD86E;
     /* gap: 14px; */
-    padding: 18px;
+    padding: 15px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .image-top-bar{
@@ -67,13 +74,13 @@
     gap: 8px;
     justify-content: center;
     padding: 10px;
-    /* border-radius: 8px; */
-    /* padding: 20px; */
-    /* justify-content: space-between; */
-    /* right: 12px;
-    font-size: 20px; */
     
 }
+.image-top-bar p{
+    align-items: center;
+    
+}
+
 .card-details{
     padding: 10px;
 }
@@ -99,9 +106,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 77pxpx;
 
 }
+
 
 .titile-text{
     font-family: "Hind";
@@ -119,16 +127,27 @@
 }
 .aed{
     font-family: "Hind";
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bolder;
     color: #FF916E;
+}
+
+.arrow-icont{
+    size: 12px;
 }
 
 /* location */
 
 .location{
+    /* text-align: center; */
     font-family: "Hind";
     font-size: 15px;
+    padding: 5px;
+}
+
+.location-icon{
+    position: relative;
+    bottom: 9px;
 }
 
 
@@ -152,49 +171,60 @@
 
 /* buttons */
 
-.contact-etails{
-    display: flex;
-    gap: 5PX;
-    
-}
 
-.wtsapp{
+
+.whatsapp-btn {
     background-color: #12B28C;
-    border: none;
-    border-radius: 8px;
-    font-family: "Hind";
+    border-radius: 12px;
+    /* padding: 12px 24px; */
     font-size: 12px;
-    color: #FFFFFF;
-    transition: background-color 0.2s ease-in-out;
-    /* width: 123px;
-    height: 50px; */
-    /* margin-right: 5px; */
-
-}
-
-.wtsapp:hover {
-    background-color:#119878; /* Hover */
+    display: flex;
+    align-items: center;
+    border: none;
+    transition: 0.3s;
   }
   
-  .wtsapp:active {
-    background-color:#17A9ED; /* Click */
+  .whatsapp-btn:hover {
+    background-color:#119878; 
   }
-
-
-.phone-mail{
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: 8px;
-}
-
+  .whatsapp-btn:active{
+    background-color:#17A9ED;
+  }
+  
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .icon {
+    color: #6c757d;
+  }
+  
+  .icon-btn:hover {
+    transform: scale(1.05);
+  }
+  
 /* FEATURES */
 
 
 .main-featues{
+    padding: 17px;
     justify-content: space-between;
 }
 .features{
-    line-height: 2px;
+    line-height: 10px;
+}
+
+.check-icont,.headphn, .sqrft-icont{
+    position: relative;
+    bottom: 10px;
 }
 
 .square-ft{
@@ -213,9 +243,9 @@
 .facility{
     background-color: #FFFFFF;
     border-radius: 8PX;
-    padding: 5PX;
+    /* padding: 5PX; */
     width: 150px;
-    height: 40px;
+    height: 51px;
     justify-content: center;
     font-size: 14px;
 }
@@ -256,6 +286,13 @@ aside{
     border-radius: 10px;
 }
 
+.right-said-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* line-height: 10px; */
+
+}
 /* .filter-body{
     background-color: "none";
 }
@@ -281,7 +318,7 @@ aside{
 
 .card-position-arrange{
     position: relative;
-    bottom: 298px;
+    bottom: 191px;
 }
 
 .martop2p{
@@ -293,6 +330,8 @@ aside{
 
 .custom-checkbox-group{
     margin-bottom: 10px;
+    /* line-height: 15px; */
+
     
 }
 
@@ -333,25 +372,48 @@ aside{
 
 /* mobile view............. */
 @media (max-width: 768px) {
-    .property-info{
-        font-family: "Hind";
-        font-size: 12px;
-    }
-    .card-in-mobile-view{
-        gap: 10PX;
-    }
-    .card-in-mobile-view{
-        border-radius: 15PX;
-        background-color: #F1F1F3;
-    }
-
-    .property-card-mobile{
-        position: relative;
-    }
-    .image-top-bar{
-        position: absolute;
-    }
-
+    .property-card{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        column-gap: 20px;
+        /* object-fit: cover; */
+        
+       }
+       .bg-image{
+        width: 100%;
+       }
+    
+       .details-address{
+        align-items: start;
+        padding: 20px
+       }
+    
+       .property-info,.features{
+        padding: 15px;
+       }
+    
+       .square-ft{
+        padding: 25px;
+       }
+       .status{
+        border-bottom: 1px solid #B3B3B3;
+        box-shadow: 0 4px 2px -2px rgba(98, 97, 97, 0.2);
+        /* object-fit: cover; */
+        gap: 50px;
+       }
+    
+       .property-info{
+        gap: 15px;
+       }
+    
+       .button-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+    
 
 }
 

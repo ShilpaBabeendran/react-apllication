@@ -7,11 +7,10 @@
     padding: 20px;
 }
 
-/* .pagination{
+.pagination{
     display: flex;
-    flex
-    -direction: column;
-} */
+    justify-content: end;
+}
 
 .page-number-for-body{
     display: flex;

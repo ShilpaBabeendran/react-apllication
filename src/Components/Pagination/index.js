@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import "../../Components/Pagination/pagination.css";
 
@@ -12,7 +13,7 @@ const Pagination = ({ totalPages = 10 }) => {
   };
 
   return (
-    <div className="flex items-center justify-center space-x-4 p-4 pagination">
+    <div className="flex items-center justify-end space-x-4 p-4 pagination">
       {/* Pagination Buttons */}
       <div className="  flex items-center space-x-2">
         <button

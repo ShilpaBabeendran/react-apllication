@@ -74,7 +74,7 @@ const LuxuryApartments = () => {
 
 
 
-mobile view............
+{/* mobile view............ */}
 
 
       {/* <div className=" max-width luxury-card p-4 d-flex flex-column flex-lg-row align-items-center">
