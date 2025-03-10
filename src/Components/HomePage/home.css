@@ -273,8 +273,10 @@ input[type="range"] {
 }
 
 .price-input {
+  width: 167px;
+    height: 60px;
   /* width: 100%; */
-  padding: 18px;
+  /* padding: 18px; */
   border: 1px solid #f5a48b;
   border-radius: 10px;
   text-align: center;
