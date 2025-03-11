@@ -4,14 +4,13 @@
 
 // import React from 'react'
 
-import React, { useState } from "react";
 // import React, { useState } from "react";
-// import { Form, InputGroup, FormControl, Button, Dropdown, DropdownButton, ToggleButtonGroup, ToggleButton } from "react-bootstrap";
-import { FaSearch, FaCompass } from "react-icons/fa";
+
+import React, { useState, useRef, useEffect } from "react";
+
+// import { FaSearch, FaCompass } from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.css';
-// import "./commonClass.css"; 
-// import HomePage from "../HomePage";
-// import Header from "../Header";
+
 import "../../Components/HomePage/home.css";
 import PropertyCard from "../PropertyCard";
 
@@ -28,83 +27,27 @@ import Area from "../../assets/iconImages/area.png";
 
 
 
-import { Form, InputGroup, Dropdown, ListGroup } from "react-bootstrap";
-
-
-// import { Form, InputGroup, FormControl, Button, Dropdown, DropdownButton } from "react-bootstrap";
-// import { FaSearch, FaCompass } from "react-icons/fa";
-
-
-// import Image from "../../assets/iconImages/card-img.png";
-// import Wtsap from "../../assets/iconImages/wtsap.jpg";
-// import phone from "../../assets/iconImages/phone.jpg";
-// import Mail from "../../assets/iconImages/mail.jpg";
-// import "../../assets/iconImages/arrow-right.png"
-
-
-
-
-// import { FaWhatsapp, FaPhone, FaEnvelope } from "react-icons/fa";
-// import { IoLocationOutline } from "react-icons/io5";
-// import { BiBed, BiBath, BiCar } from "react-icons/bi";
-// import { FiExternalLink } from "react-icons/fi";
-// import LuxuryApartments from "../LuxuaryApartment";
-
-
-
-
-// // import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react"; 
-// import { Navigation, Pagination } from "swiper/modules"; 
-
-// // Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
-
-
-
-
-
 const HomePage = ()=>{
 
-// new
 
-// const [activeTab, setActiveTab] = useState("Rent");
+
 // const [isExpanded, setIsExpanded] = useState(false);
 
-// const [showDropdown, setShowDropdown] = useState(false);
-
-
-const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleBorder = () => {
-    setIsExpanded(!isExpanded);
-  };
+//   const toggleBorder = () => {
+//     setIsExpanded(!isExpanded);
+//   };
 
 
 
-
-// pricing drop down
-
-// const [priceDropdown, setPriceDropdown] = useState(false);
-// const togglePriceDropdown = () =>{
-//     setPriceDropdown (!priceDropdown);
-// };
 
 // // border
-    const [ifActive, setClickActive]= useState(false);
-    const togglePriceBorder =() =>{
-        setClickActive(!ifActive);
-    };
+    // const [ifActive, setClickActive]= useState(false);
+    // const togglePriceBorder =() =>{
+    //     setClickActive(!ifActive);
+    // };
 
 
-const [price, setPrice] = useState(0);
 
-const handlePriceChange = (e) => {
-    setPrice(parseInt(e.target.value, 10));
-  };
 
 
 
@@ -112,10 +55,38 @@ const handlePriceChange = (e) => {
 
 //   map view
 
+// const [activeTab, setActiveTab] = useState("rent");
 
 
 
+const [searchDropdown, setSearchDropdown] = useState(false);
+  const [priceDropdown, setPriceDropdown] = useState(false);
+  const [price, setPrice] = useState(750000);
 
+  const searchRef = useRef(null);
+  const priceRef = useRef(null);
+  const priceInputRef = useRef(null)
+
+// Close dropdowns when clicking outside
+useEffect(() => {
+    function handleClickOutside(event) {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setSearchDropdown(false);
+      }
+      if (
+        priceRef.current &&
+        !priceRef.current.contains(event.target) &&
+        priceInputRef.current !== event.target
+      ) {
+        setPriceDropdown(false);
+      }
+    }
+
+document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  
 
 
   return(
@@ -129,7 +100,7 @@ const handlePriceChange = (e) => {
 
         {/* navigation bar */}
         
-                    <div className=" nav-container d-none d-md-block">
+                    <div className=" nav-container d-none d-md-block hidden lg:flex justify-between items-center px-14 py-8 shadow-xs bg-white">
                         <div className=" max-width nav">
                             <div className=' nav-child-abc'>
                                 <div className='abc-child'>
@@ -138,7 +109,7 @@ const handlePriceChange = (e) => {
                                 </div>
                                 <p className='real-estate'>Your Perfect Real Estate Partner</p>
                             </div>
-                            <div className=' nav-child-menu'>
+                            <div className=' nav-child-menu flex lg:flex-row flex-col justify-between items-center gap-7'>
                                 {/* <div className='  buy-rent'> */}
                                     <p className="">Buy</p>
                                     <p className='rent' style={{color:"#F4835F"}}>Rent</p>
@@ -160,141 +131,103 @@ const handlePriceChange = (e) => {
 
         {/* tab-options */}
 
-                    <div className='max-width tab-options '>
-                       
-                        {/* buy or rent option button */}
-
-                        <div class="rent-and-buy d-none d-md-block ">
-                            <div class="toggle-container d-flex">                              
-                                <button class="toggle-btn">Rent</button>
-                                <button class="toggle-btn active">Buy</button>
-                            </div>
-                        </div>
-
-
-                     {/*search input ....................  */}
-                     {/* <div > */}
-                            {/* <div
-                                className={`search-container ${isExpanded ? "expanded" : ""}`}
-                                onClick={toggleDropdown}
-                            >
-                                <img src={search} alt="search" className="search-icon" />
-                                <input
-                                type="text"
-                                placeholder="Search property"
-                                className="search-input"
-                                readOnly
-                                />
-                                
-                            </div>
-                            <img src={vector} alt="vector" className="search-icon" /> */}
-
-                            {/* {isExpanded && (
-                                <div className="dropdown-content">
-                                    <div className="dropdown-item">
-                                        <p><img src={City} alt="city" className="icon" /> City, Towns, Texas</p>
-                                    </div>
-                                    <div className="dropdown-item">                                
-                                         <p><img src={Area} alt="area" className="icon" /> Areas</p>                                    
-                                    </div>
-                                    <div className="dropdown-item">                                 
-                                        <p><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</p>
-                                    </div>
-                                </div>
-                            )} */}
-                        {/* </div> */}
-
-
-{/* testtttt */}
-
-    <div className="search-container position-relative">
-        <div className="before-click-search ">
-            <div className="search-icon-and-inputbox ">
-                <img src={search} alt="search" className="search-icon" />
-                {/* </InputGroup.Text> */}
-                <input
-                    type="text"
-                    placeholder={`"Search property" ${isExpanded ? "active-border" : ""}`}
-                    onClick={toggleBorder}
-
-                />               
+        <div className=" max-width mt-5 d-flex p-1 rounded ">
+      {/* 10% - Buy/Rent Switcher */}
+            <div className= " tab-button-toggle d-none d-md-block  p-1 rounded-xl hidden "  >
+                <div className="df-tgbt-flx d-flex" style={{backgroundColor:"#F1F1F3",borderRadius:"15px" }}>
+                    <div
+                         style={{backgroundColor:"#F1F1F3", alignItems:"center" , padding:"15px", borderRadius:"15px" }}>
+                            Buy
+                    </div>
+                    <div
+                        style={{backgroundColor:"#2E96C6", color:"#FFFFFF", padding:"15px", borderRadius:"15px", width:"50%"}}>
+                            Rent
+                    </div>
+                </div>
+                
             </div>
-            <div className="location-tracker">
-                <img src={vector} alt="vector" className="search-icon" />
-            </div>
+
+      {/* 50% - Search Input */}
+      <div ref={searchRef} className="position-relative mx-2 flex-grow-1" style={{ width: "50%" }}>
+        <div className="search-container input-group" onClick={(e) => {
+              e.stopPropagation(); // Stop event bubbling
+              setSearchDropdown(true);
+              setPriceDropdown(false);
+            }}>
+          <span className="input-group-text" style={{border:"none"}}><img src={search} alt="search" className="search-icon" /></span>
+          <input type="text" className="form-control" placeholder="Search property" readOnly style={{border:"none"}} />
+          <span className="input-group-text"style={{border:"none"}}><img src={vector} alt="vector" className="search-icon" /></span>
         </div>
-
-        {isExpanded && (
-            <div className="dropdown-content ">
-                <div className="dropdown-item">
-                    <p><img src={City} alt="city" className="icon" /> City, Towns, Texas</p>
-                </div>
-                <div className="dropdown-item">                                
-                        <p><img src={Area} alt="area" className="icon" /> Areas</p>                                    
-                </div>
-                <div className="dropdown-item">                                 
-                    <p><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</p>
-                </div>   
-            </div>
+        
+        
+        {/* Search Dropdown */}
+        {searchDropdown && (
+          <div className="dropdown-content  show w-100 p-2">
+            <div className="dropdown-item"><img src={City} alt="city" className="icon" /> City, Towns, Texas</div>
+            <div className="dropdown-item"> <img src={Area} alt="area" className="icon" /> Areas</div>
+            <div className="dropdown-item"><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</div>
+          </div>
+          
+         
+          
         )}
-    </div>
+      </div>
 
+      {/* 20% - Price Filter */}
+      <div ref={priceRef} className=" price-filter-container position-relative mx-2" style={{ width: "20%",height:"57px" }}>
+        
+        <button className="d-flex justify-content-between btn  w-100" onClick={(e) => {
+              e.stopPropagation(); // Stop event bubbling
+              setPriceDropdown(!priceDropdown);
+              setSearchDropdown(false);
+            }}>
+            <div className='price-text'>Price</div>
+            <div><img className="down-arrow" src={Charecter} alt="downarrow" /></div>
+        </button>
 
-
-{/* testtttttt */}
 
 
         
 
-                     {/* pricing............ */}
-                        <div className="price-filter-container d-none d-md-block">
-                                
-                            <div className= 'pricing-property '  >
-                                <div className='price-text'>Price</div>
-                                <div className={`'down-arrow' ${ifActive ? "active-border" : ""}`}
-                                    onClick={togglePriceBorder} >
-                                    <img className="down-arrow" src={Charecter} alt="downarrow" />
-                                </div>
-                            </div>
-                               
+        {/* Price Filter Dropdown */}
+        {priceDropdown && (
+          <div className="pricing-drop-down dropdown-menu  w-100 p-4"style={{backgroundColor:"#FFF7F5", border:"FFF7F5", alignItems: "center", padding:"20px"}}>
+            <h3>{price.toLocaleString()}0</h3>
+            <div className="text-center fw-bold" ><input
+                type="text"
+                className="form-control"
+                placeholder="Enter Amount in AED"
+                value={price.toLocaleString()}
+                ref={priceInputRef}
+                onClick={(e) => e.stopPropagation()} // Prevents dropdown from closing
+                onChange={(e) => setPrice(parseInt(e.target.value.replace(/,/g, ""), 10) || 0)}
+              /></div>
+            <div className="d-flex justify-content-between small">
+              <span>Min</span> <span>Max</span>
+            </div>
+            {/* <input type="range" className="form-range my-2" /> */}
+            <input className="price-input" type="" placeholder="Enter Amount in AED" />
+          </div>
+        )}
+      </div>
 
 
-                            {/* drop-down-box */}
-                            {ifActive && (
-                                <div className="pricing-drop-down">
-                                    <h3>{price}</h3> {/* Display the current price */}
-                
-                                    {/* Min and Max Range Sliders */}
-                                    <div className="range-slider">
-                                        <input
-                                            type="range"
-                                            min="0"
-                                            max="750000"
-                                            value={price}
-                                            onChange={handlePriceChange}
-                                        />
-                                        {/* Display Values */}
-                                        <div className="price-values">
-                                            <p>Min</p>
-                                            <p>Max</p>
-                                        </div>
-                                        
-                                    </div>
-                                    <input className="price-input" type="number" placeholder="Enter Amount in AED" />
-                                </div>
-                            )}
+      
 
-                    
-                            
-                        </div>
-                        <button className='font-family find d-none d-md-block '>Find</button>
-                    </div>
+
+
+      {/* 20% - Find Button */}
+      <div className="mx-20" style={{  width: "20%", }}>
+        <button className=" font-family find w-100 d-none d-md-block "style={{ height:"57px" }}>Find</button>
+      </div>
+    </div>
+
 
                     {/* Price Dropdown */}
  
                                     {/* properties for rent in UAE */}
 
-                        <div className=".max-width mrleft-2 properties-for-rent">
+                        <div className="max-width properties-for-rent">
                             <div className="properties">
                                 <div className="property-rent">Properties for Rent in United Arab Emirates</div>
                                 <div className="listing">10 Listings</div>
@@ -313,9 +246,20 @@ const handlePriceChange = (e) => {
 
                             
                                
+
+
+
+
+                               
                                 
                             
                         </div>
+
+
+
+
+
+                        
 
 
 
@@ -338,13 +282,9 @@ const handlePriceChange = (e) => {
                 
 
 
-
-
-
         
 
-
-
+        
     
 
 

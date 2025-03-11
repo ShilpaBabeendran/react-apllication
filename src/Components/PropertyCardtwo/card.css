@@ -54,56 +54,40 @@
 }
 
 
-.image{
-    position: relative;
-    /* height: 307px; */
-    padding: 5PX;
-    /* width: 30%; */
-    /* border-radius: 5px; */
-    align-items: center;
-    
-    
-    
-}
-
-.bg-image{
-    /* position: absolute; */
-    /* bottom: 8px; */
-    /* left: 0;
-    width: 200px;
-    height: 345px; */
-}
-
 .days{
     /* display: flex;
     align-items: center; */
     background-color: rgba(35, 34, 34, 0.44);
     backdrop-filter: blur(10px); /* Applies blur effect */
     color: #ffffff;
-    font-family: "Hind";
-    font-size: 12px;
-    align-items: center;
-    /* gap: 10px; */
+
     padding: 5px;
+    height: 25%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     
 }
 .verified{
-    background-color: #FF916E;
+    /* background-color: #FF916E; */
     color: #FFFFFF;
-    font-size: 12px;
-    gap: 10px;
+    /* font-size: 12px; */
+    /* gap: 10px;
     padding: 5px;
-
+    height: 25%; */
 }
 
 .headphone{
     background-color: #FFD86E;
+    height: 32%;
     /* gap: 14px; */
     padding: 15px;
     border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px
+    /* padding: 10px; */
+    
+}
+.verified-img{
+    size: 10px;
 }
 
 .image-top-bar{
@@ -112,7 +96,22 @@
     left: 24px;
     gap: 8px;
     justify-content: center;
-    padding: 10px;
+    padding: 00px;
+    
+}
+.image-top-bar p{
+    align-items: center;
+    
+}
+
+
+.image-top-bar{
+    position: absolute;
+    top: 25px;
+    left: 24px;
+    gap: 8px;
+    justify-content: center;
+    /* padding: 10px; */
     
 }
 .image-top-bar p{
@@ -272,6 +271,11 @@
     font-weight: 600;
     color: #12B2AF;
 
+}
+
+
+.badge-padng-adjst{
+    padding-top: 12%;
 }
 
 

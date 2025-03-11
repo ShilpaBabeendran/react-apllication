@@ -55,22 +55,22 @@ const PropertyCardtwo = () => {
 
 
                                 <div className="image">
-                                    <img src={Image} alt="Property" className="bg-image"/>
+                                <img src={Image} alt="Property" className="bg-image" style={{width:"100%"}}/>
 
-                                    {/* Overlay Badges */}
-                                    <div className=" flex image-top-bar" >
-                                        <div className=" flex days">
-                                            <img src={Time} alt="Property" className="time" />  
-                                            <p>Listed 5 Days ago</p>
+                                        {/* Overlay Badges */}
+                                        <div className=" flex image-top-bar" >
+                                            <div className=" flex text-center days w-5/12 p-3.5 rounded-l-lg bg-[#00000070] flex items-c">
+                                                <div className="imgText "style={{alignItems:"center"}}><img src={Time} alt="Property" className="verified-img "  />  </div>
+                                                <div><p>Listed 5 Days ago</p></div>
+                                            </div>
+                                            <div className="flex verified">
+                                            <div><img src={Verified} alt="Property" className="verified-img"/></div>
+                                                <div><p>Verified by Athirad</p></div>
+                                            </div>
+                                            <div className="flex headphone">
+                                                <img src={headphn} alt="Property" className="headohn"/>
+                                            </div>
                                         </div>
-                                        <div className="flex verified">
-                                            <img src={Verified} alt="Property" className="verified"/>
-                                            <p>Verified by Athirad</p>
-                                        </div>
-                                        <div className="flex headphone">
-                                            <img src={headphn} alt="Property" className="headohn"/>
-                                        </div>
-                                    </div>
 
 
                                         {/* Next Image Button */}

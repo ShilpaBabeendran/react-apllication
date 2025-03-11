@@ -5,11 +5,14 @@
     justify-content: center;
     margin-top: 20px;
     padding: 20px;
+    border-radius: 30px;
 }
 
 .pagination{
     display: flex;
     justify-content: end;
+    border-radius: 20px;
+    
 }
 
 .page-number-for-body{
@@ -19,6 +22,11 @@
     gap: 20px;
     padding: 20px;
     gap: 20px;
+    border-radius: 20px;
+}
+
+.page-no{
+    border-radius: 20px;
 }
 
 

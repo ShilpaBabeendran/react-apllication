@@ -1,16 +1,16 @@
-/* .property-card-parent{
+.property-card-parent{
+    /* gap: 10px; */
+    /* margin-right: 3%; */
+    background-color: #F1F1F3;
     
-} */
+}
 
 
 .property-card{
     /* position: relative; */
     /* width: 70%; */
     /* position: absolute; */
-    border-radius: 15PX;
-    background-color: #F1F1F3;
-    justify-content: space-between;
-
+    
     /* height: 350px; */
 }
 
@@ -46,16 +46,18 @@
     align-items: center;
     /* gap: 10px; */
     padding: 5px;
+    height: 25%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     
 }
 .verified{
-    background-color: #FF916E;
+    /* background-color: #FF916E; */
     color: #FFFFFF;
     font-size: 12px;
     gap: 10px;
     padding: 5px;
+    height: 25%;
 
 }
 
@@ -65,6 +67,8 @@
     padding: 15px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    padding: 5px;
+    height: 32%;
 }
 
 .image-top-bar{
@@ -73,7 +77,7 @@
     left: 24px;
     gap: 8px;
     justify-content: center;
-    padding: 10px;
+    padding: 00px;
     
 }
 .image-top-bar p{
@@ -208,7 +212,11 @@
   }
   
   .icon-btn:hover {
+    color: #FF916E;
     transform: scale(1.05);
+  }
+  .icon-btn:active{
+    background-color: #FF916E;
   }
   
 /* FEATURES */
@@ -275,7 +283,7 @@
 /* said-bar */
 
 aside{
-    width: 40%;
+    width: 30%;
     /* gap: 20px; */
     /* padding-left: 15px; */
     /* margin-left: 15px; */
@@ -319,6 +327,7 @@ aside{
 .card-position-arrange{
     position: relative;
     bottom: 191px;
+    width: 25%;
 }
 
 .martop2p{

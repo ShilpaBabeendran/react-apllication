@@ -17,14 +17,14 @@ const Pagination = ({ totalPages = 10 }) => {
       {/* Pagination Buttons */}
       <div className="  flex items-center space-x-2">
         <button
-          className="px-3 py-1 border rounded-lg text-gray-500"
+          className="px-3 py-1 rounded-lg text-gray-500" style={{borderRadius:"12px", border:"none", backgroundColor:"none"}}
           onClick={() => goToPage(1)}
           disabled={currentPage === 1}
         >
           «
         </button>
-        <button
-          className="px-3 py-1 border rounded-lg text-gray-500"
+        <button 
+          className=" px-3 py-1 border rounded-lg text-gray-500"
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
         >

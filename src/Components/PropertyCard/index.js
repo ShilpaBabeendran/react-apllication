@@ -73,13 +73,13 @@ const PropertyCard = () => {
 
 
     <>
-        <div className=" flex max-width property-body ">
+        <div className=" flex  property-body ">
 
-            <div className="property-card-parent d-none d-md-block ">
+            <div className= " property-card-parent d-none d-md-block ">
 
                 {/* propwrty=card-1 */}
 
-                <div className=" flex property-card ">
+                <div className=" flex  property-card ">
                     
                     {/* Property Image Section */}
 
@@ -127,7 +127,7 @@ const PropertyCard = () => {
                                         </div>
                                     </div>
 
-                                    <div className="d-flex gap-1 justify-content-center align-items-center p-4">
+                                    <div className="btn btn-success whatsapp-btn d-flex align-items-center">
                                         {/* WhatsApp Button */}
                                         <button className="btn btn-success whatsapp-btn d-flex align-items-center">
                                             <img src={Whatsapp} alt="Whatsapp" className="me-2" size={24} />
@@ -251,20 +251,20 @@ const PropertyCard = () => {
 
 
                                 <div className="image">
-                                    <img src={Image} alt="Property" className="bg-image"/>
+                                    <img src={Image} alt="Property" className="bg-image" style={{width:"100%"}}/>
 
                                     {/* Overlay Badges */}
                                     <div className=" flex image-top-bar" >
-                                        <div className=" flex days">
-                                            <img src={Time} alt="Property" className="time" />  
+                                        <div className=" flex text-center days w-5/12 p-3.5 rounded-l-lg bg-[#00000070] flex items-c">
+                                            <img src={Time} alt="Property-img" className="time " width="17" height="18" viewBox="0 0 17 18" fill="none"  />  
                                             <p>Listed 5 Days ago</p>
                                         </div>
                                         <div className="flex verified">
-                                            <img src={Verified} alt="Property" className="verified"/>
+                                            <img src={Verified} alt="Property-img" className="verified"/>
                                             <p>Verified by Athirad</p>
                                         </div>
                                         <div className="flex headphone">
-                                            <img src={headphn} alt="Property" className="headohn"/>
+                                            <img src={headphn} alt="Property-img" className="headohn"/>
                                         </div>
                                     </div>
 
@@ -293,22 +293,25 @@ const PropertyCard = () => {
                                                     </div>
                                                 </div>
 
+
+                                                
+
                                                 <div className="d-flex gap-1 justify-content-center align-items-center p-4">
-                                        {/* WhatsApp Button */}
-                                        <button className="btn btn-success whatsapp-btn d-flex align-items-center">
-                                            <img src={Whatsapp} alt="Whatsapp" className="me-2" size={24} />
-                                                <span className="fw-bold text-white">WHAT’S APP</span>
-                                        </button>
+                                                    {/* WhatsApp Button */}
+                                                    <button className=" btn-success whatsapp-btn d-flex align-items-center">
+                                                      <img src={Whatsapp} alt="Whatsapp" className="me-2" size={24} />
+                                                            <span className="fw-bold text-white">WHAT’S APP</span>
+                                                    </button>
 
-                                        {/* Phone Icon Button */}
-                                        <div className="icon-btn">
-                                            <img src={Phone} alt="phone" size={24} className="icon" />
-                                        </div>
+                                                    {/* Phone Icon Button */}
+                                                    <div className="icon-btn">
+                                                        <img src={Phone} alt="phone" size={24} className="icon" />
+                                                    </div>
 
-                                        {/* Email Icon Button */}
-                                        <div className="icon-btn">
-                                            <img src={Mail} alt="mail" className="icon" />
-                                        </div>
+                                                    {/* Email Icon Button */}
+                                                    <div className="icon-btn">
+                                                        <img src={Mail} alt="mail" className="icon" />
+                                             </div>
                                     </div>
                                             </div>
 
@@ -780,6 +783,17 @@ const PropertyCard = () => {
                        
                        
         
+
+
+
+
+
+   
+
+
+
+
+
 
 
 

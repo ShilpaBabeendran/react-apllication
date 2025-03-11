@@ -1,4 +1,6 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState, useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import "../footer.css";
 import "../../Components/FooterPage/footer.css";
 import ArrowRight from "../../assets/iconImages/arrow-right.png";
@@ -14,6 +16,28 @@ import Downarrow from "../../assets/iconImages/down-arrow 2.jpg"
 
 
 const Footer = ()=>{
+
+
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [price, setPrice] = useState(750000);
+    const dropdownRef = useRef(null);
+  
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+  
+    React.useEffect(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+
+
+
 
   return(
 
@@ -169,6 +193,13 @@ const Footer = ()=>{
 
 
 
+
+
+
+
+
+
+            
     </>
 
 

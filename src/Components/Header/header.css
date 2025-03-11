@@ -1,45 +1,24 @@
-.warning-banner {
+.warning-banner-bgclr{
+  background-color: #F4835F;
+}
+
+
+
+.warning-banner-bgclr {
+  background-color: #F4835F; /* Matching banner color */
+  width: 100%;
+  /* border-radius: 8px; */
+  text-align: center;
+}
+
+/* Mobile View: Center Content & Adjust Padding */
+@media (max-width: 767px) {
+  .warning-banner-bgclr {
     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 10px;
-     gap: 5px;
-     /* height: 62px; */
-     /* background-color: #F4835F; */
- }
- 
- .warning-text{
-   /* font-family: "Hind"; */
-   font-size: 12px;
-   /* font-weight: 400; */
-   /* line-height: 26.5px; */
-   /* color: #FFFFFF; */
- }
- 
- .learn-more-btn{
-   padding: 10PX;
-   border-radius: 35px;
-   /* width: 72px;
-   height: 25px; */
-   font-size: 9px;
-   /* line-height: 26.5px; */
-   border: none;
-   
- }
-
- @media (max-width: 768px){
-
-    .warning-banner{
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-    .warning-text{
-        font-family: "Hind";
-        font-size: 12px;
-    }
-    /* .nav,.buy-or-rent{
-      display: none;
-    } */
-    
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
+
+  
+}

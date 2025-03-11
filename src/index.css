@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Figtree&family=Hind:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
 @import './styles/commonClasses.css';
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 body {
   margin: 0;
   font-family: "Hind", sans-serif;
