@@ -14,13 +14,12 @@
   }
 
  
-  /* .w-a-c{
-    width: 12%
-  } */
-
-  /* .price-wd-ad{
-    width: 17%;
-  } */
+  /* to remove input border on click */
+  .input-no-focus {
+    outline: none !important; /* Removes blue outline */
+    box-shadow: none !important; /* Removes any shadow on focus */
+  }
+  
   .bttn{
     /* width: 12%; */
     display: flex;

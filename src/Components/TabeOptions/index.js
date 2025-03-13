@@ -91,14 +91,14 @@ const [isActive, setIsActive] = useState(false);
 
 
                 {/* Search Box - 70% */}
-            <div className="col-7  w-70  align-items-center justify-content-center " >
+            <div className="col-7  w-70  align-items-center justify-content-center position-relative " >
                 <div className="d-flex w-100 align-items-center p-3 rounded-3 "style={{border:"1px solid #CCCCCC"}} onClick={() => setIsOpen(!isOpen)}>
                     <img src={search} alt="search" className="" />
-                    <input type="text" className="border-0 w-100" placeholder="Search property" readOnly />
+                    <input type="text" className="border-0 w-100 input-no-focus" placeholder="Search property" readOnly />
                     <img src={vector} alt="vector" className="ms-2" />
                 </div>
                 {isOpen && (
-                    <div className="dropdown-content g-1  show w-100 p-2" style={{backgroundColor:"#FFF7F5", border:"FFF7F5", alignItems: "center", padding:"20px"}}>
+                    <div className="dropdown-content g-1  show w-100 p-2 position-absolute" style={{backgroundColor:"#FFF7F5", border:"FFF7F5", alignItems: "center", padding:"20px"}}>
                         <div className="dropdown-item"><img src={City} alt="city" className="icon" /> City, Towns, Texas</div>
                         <div className="dropdown-item"> <img src={Area} alt="area" className="icon" /> Areas</div>
                         <div className="dropdown-item"><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</div>
@@ -107,14 +107,14 @@ const [isActive, setIsActive] = useState(false);
             </div>
 
             {/* Price Filter - 10% */}
-            <div className="col-1 price-wd-ad "style={{width:"16%"}}>
+            <div className="col-1 price-wd-ad position-relative "style={{width:"16%"}}>
                 <div className="d-flex justify-content-between  align-items-center p-3  rounded-3 "style={{border:"1px solid #CCCCCC"}} onClick={() => setIsActive(!isActive)}>
                     <span>Price</span>
                     <img src={Charecter} alt="downarrow" />
                 </div>
       
                 {isActive && (
-                    <div className="dropdown-options w-10   rounded-3 "style={{backgroundColor:"#FFF7F5", border: "1px solid FFF7F5", alignItems: "center", padding:"20px"}}>
+                    <div className="dropdown-options w-10   rounded-3 position-absolute "style={{backgroundColor:"#FFF7F5", border: "1px solid FFF7F5", alignItems: "center", padding:"20px"}}>
                         <div className="text-center fw-bold">{price.toLocaleString()}</div>
                         <input
                         type="range"
@@ -138,15 +138,13 @@ const [isActive, setIsActive] = useState(false);
                     </div>
                 )}    
             </div>
-            {/* Find Button - 10% */}
-            <div className="col-2 align-items-center  ">
-                <div className="d-flex w-100 p-3 bttn rounded-3 " style={{backgroundColor:"#FF916E",borderRadius:"15px", }}>
-                    <button className="bttn " style={{border:"none", backgroundColor:"#FF916E"}}>
-                        Find
-                    </button>
-                    
-                </div>
-            </div>
+            <div className="col-2 align-items-center ">
+                <button
+                    className="btn text-white w-100 p-3 rounded-3"
+                    style={{ backgroundColor: "#FF916E", border: "none" }}>
+                    Find
+                </button>
+        </div>
         </div>
         
     </div>
@@ -159,47 +157,53 @@ const [isActive, setIsActive] = useState(false);
     {/* mobile view */}
 
 
-    <div className=" mt-5 mrgn d-block d-md-none ">
-        <div className="row rwa-djst g-3"> {/* Remove gaps */}
-    
-                {/* Buy/Rent Toggle - 10% */}
-            {/* <div className="col-1 align-items-center w-a-c "> */}
-                {/* <div className="d-flex w-100 align-items-center p-3  rounded-3 " style={{backgroundColor:"#F1F1F3",borderRadius:"15px" }}> */}
-                    {/* <div className="bttn p-4  rounded-3" style={{backgroundColor:"#F1F1F3",borderRadius:"15px" }}> */}
-                        {/* <img src={Menu} alt="vector" className="ms-2" /> */}
-                    {/* </div> */}
-                    
-                {/* </div> */}
-            {/* </div> */}
+    <div className="mt-5 d-block d-md-none ">
+      <div className="row g-3 justify-content-center; ">
+        {/* Search Box - 70% */}
+        <div className="col-10 d-flex align-items-center justify-content-between position-relative" style={{ gap: "15px" }}>
+        <img src={Menu} alt="vector" className="ms-2" />
 
+          <div
+            className="d-flex w-100 align-items-center p-3 rounded-3"
+            style={{ border: "1px solid #CCCCCC", cursor: "pointer" }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <img src={search} alt="search" className="" />
+            <input
+              type="text"
+              className="border-0 w-100 input-no-focus"
+              placeholder="Search property"
+              readOnly
+            />
+          </div>
 
-                {/* Search Box - 70% */}
-            <div className="col-7 d-flex  w-70  align-items-center justify-content-center " style={{gap:"15px"}} >
-                <img src={Menu} alt="vector" className="ms-2" />
-                <div className="d-flex w-100 align-items-center p-3 rounded-3 "style={{border:"1px solid #CCCCCC"}} onClick={() => setIsOpen(!isOpen)}>
-                    <img src={search} alt="search" className="" />
-                    <input type="text" className="border-0 w-100" placeholder="Search property" readOnly />
+          {isOpen && (
+            <div
+                className="dropdown-content w-100 p-2 rounded-3 position-absolute"
+                style={{
+                    backgroundColor: "#FFF7F5",
+                    border: "1px solid #CCC",
+                    padding: "15px",
+                    top: "100%",
+                    left: "0",
+                    zIndex: 20,
+                }}>
+                <div className="dropdown-item">
+                    <img src={City} alt="city" className="icon" /> City, Towns, Texas
                 </div>
-                    {isOpen && (
-                        <div className="dropdown-content  show w-100 p-2" style={{backgroundColor:"#FFF7F5", border:"FFF7F5", alignItems: "center", padding:"20px"}}>
-                            <div className="dropdown-item"><img src={City} alt="city" className="icon" /> City, Towns, Texas</div>
-                            <div className="dropdown-item"> <img src={Area} alt="area" className="icon" /> Areas</div>
-                            <div className="dropdown-item"><img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental</div>
-                        </div>      
-                    )} 
-                                    <img src={Sfilter} alt="vector" className="ms-2" style={{backgroundColor:"#018BCF"}} />
-     
+                <div className="dropdown-item">
+                    <img src={Area} alt="area" className="icon" /> Areas
+                </div>
+                <div className="dropdown-item">
+                    <img src={Commercial} alt="commercial" className="icon" /> Commercial, Rental
+                </div>
             </div>
+          )}
 
-            {/* Find Button - 10% */}
-            {/* <div className="col-1 bttn  rounded-3" style={{backgroundColor:"#018BCF"}}> */}
-                {/* <img src={Sfilter} alt="vector" className="ms-2" style={{backgroundColor:"#018BCF"}} /> */}
-            {/* </div> */}
-   
+            <button className="btnnn" style={{backgroundColor:"#018BCF", cursor:"pointer", border:"none", borderRadius:"2%"}}><img src={Sfilter} alt="vector" className="ms-2 p-2"  /></button>
         </div>
+      </div>
     </div>
-
-
 
 
 
