@@ -1,37 +1,66 @@
-import React from 'react'
-import "../HeaderMain/main.css";
-import 'bootstrap/dist/css/bootstrap.css';
+// import React from 'react'
+import React, { useState } from "react";
 
+import "../HeaderMain/main.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const HeaderMain = ()=>{
+    const [isOpen, setIsOpen] = useState(false);
+
 
   return(
 
     <>
     
-        <div className=" nav-container d-none d-md-block hidden lg:flex justify-between items-center px-14 py-8 shadow-xs bg-white">
-            <div className=" max-width nav">
-                <div className=' nav-child-abc'>
-                    <div className='abc-child'>
-                        <p className="">ABC</p>
-                        <p className="">PROPERTIES</p>
-                    </div>
-                    <span className='real-estate'>Your Perfect Real Estate Partner</span>
-                </div>
-                <div className=' nav-child-menu fnt-siz '>
-                    <div className='nav-chld-text'><p className="">Buy</p></div>
-                    <div className='nav-chld-text'><p className='rent' style={{color:"#F4835F"}}>Rent</p></div>
-                    <div className=' empty-div'style={{ backgroundColor: "#CBCBCB", padding : "1px", borderRadius:"2px", height:"30px", width: "2px" }}></div>
-                    <div className='nav-chld-text'><p className=""> Navigators Edge </p></div>
-                    <div className='nav-chld-text'><p className=""> Our Agent</p></div>
-                    <div className='nav-chld-text'><p className="">Blogs & Insights</p></div>
-                    <div className='nav-chld-text'><p className="">New Launges</p></div>
-                    <div className='nav-chld-text'><p className="">About Us</p></div>
-                    <div className='nav-chld-text'><p className="">Help & Support</p></div>                  
-                </div>
-                <div className='nav-child-btn'>Sell Property</div>
+                
+        <div className="nav-container d-none d-md-flex justify-content-between align-items-center px-4 py-3 shadow-sm bg-white">
+        <div className="nav d-flex justify-content-between w-100">
+          {/* Logo & Text */}
+          <div className="nav-child-abc d-flex flex-column">
+            <div className="abc-child">
+              <p className="mb-0 fw-bold">ABC</p>
+              <p className="mb-0">PROPERTIES</p>
             </div>
-        </div>    
+            <span className="real-estate text-muted">
+              Your Perfect Real Estate Partner
+            </span>
+          </div>
+
+          {/* Navigation Menu */}
+            <div className="nav-child-menu fnt-siz d-flex align-items-center">
+                <div className=" nav-chld-text d-flex align-items-center">
+                    {["Buy", "Rent"].map((item, index) => (
+                        <div key={index} className="nav-chld-text mx-2">
+                            
+                            <p className={`mb-0 link-hover ${item === "Rent" ? "active-rent" : ""}`}>{item}</p>
+                        </div>
+                    ))}
+                </div>
+
+                <div className=' empty-div'style={{ backgroundColor: "#CBCBCB", padding : "1px", borderRadius:"2px", height:"30px", width: "2px" }}></div>
+                <div className="nav-chld-text d-flex align-items-center">
+                    {["Navigators Edge", "Our Agent", "Blogs & Insights", "New Launches", "About Us", "Help & Support"].map((item, index) => (
+                        <div key={index} className="nav-chld-text mx-2">
+                            
+                            <p className="mb-0 link-hover">{item}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+          {/* Sell Property Button */}
+          <button className="nav-child-btn ">Sell Property</button>
+        </div>
+      </div>
+
+      
+
+    
+
+
+
+        
     </>
     
 

@@ -2,17 +2,20 @@
 
 
 .nav-child-abc p{
-    line-height: 10px;
+    line-height: 15px;
   }
 
 .nav-container{
     box-shadow: 0 2px 4px 0px #B3B3B317;
+    
 }
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .nav-child-abc{
     display: flex;
@@ -27,12 +30,7 @@
     line-height: 4px;
     color: #192E40;
 }
-.real-estate{
-    font-family: 'Hind';
-    font-weight: 300;
-    font-size: 8px;
-    color: #192E40;
-}
+
 .real-estate{
     font-family: 'Hind';
     font-weight: 300;
@@ -51,7 +49,7 @@
 
 }
 .nav-child-btn {
-
+    border: none;
     border-radius: 58px;
     background-color: #FEF8E7;
     font-family: 'Hind';
@@ -60,3 +58,37 @@
     color: #45525E;
     padding: 15px;
   }
+
+  
+
+
+
+
+
+
+
+
+  .link-hover {
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Hind';
+    font-weight: 500;
+    font-size: 15px;
+    gap: 30px;    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .link-hover:hover {
+    color: #F4835F;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  
+  .active-rent{
+    color: #F4835F;
+  }
+  
