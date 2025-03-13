@@ -107,8 +107,8 @@ const [isActive, setIsActive] = useState(false);
             </div>
 
             {/* Price Filter - 10% */}
-            <div className="col-1 price-wd-ad ">
-                <div className="d-flex justify-content-between w-100 align-items-center p-3  rounded-3 "style={{border:"1px solid #CCCCCC"}} onClick={() => setIsActive(!isActive)}>
+            <div className="col-1 price-wd-ad "style={{width:"16%"}}>
+                <div className="d-flex justify-content-between  align-items-center p-3  rounded-3 "style={{border:"1px solid #CCCCCC"}} onClick={() => setIsActive(!isActive)}>
                     <span>Price</span>
                     <img src={Charecter} alt="downarrow" />
                 </div>

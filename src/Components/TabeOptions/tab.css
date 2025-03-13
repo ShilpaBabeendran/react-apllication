@@ -13,18 +13,14 @@
       border-radius: 50px;
   }
 
-  .rwa-djst{
-    margin-right: 4%;
-    margin-left: 5%;
-    
-  }
-  .w-a-c{
+ 
+  /* .w-a-c{
     width: 12%
-  }
+  } */
 
-  .price-wd-ad{
-    width: 12%;
-  }
+  /* .price-wd-ad{
+    width: 17%;
+  } */
   .bttn{
     /* width: 12%; */
     display: flex;
@@ -35,6 +31,9 @@
 .mrgn{
     display: flex;
     flex-direction: column;
+    margin-right: 5%;
+    margin-left: 5%;
+    gap: 15px;
 }
   
 
