@@ -160,8 +160,8 @@ const [isActive, setIsActive] = useState(false);
     <div className="mt-5 d-block d-md-none ">
       <div className="row g-3 justify-content-center; ">
         {/* Search Box - 70% */}
-        <div className="col-10 d-flex align-items-center justify-content-between position-relative" style={{ gap: "15px" }}>
-        <img src={Menu} alt="vector" className="ms-2" />
+        <div className="col-10 d-flex align-items-center justify-content-between position-relative" style={{ gap: "2%", marginLeft:"4%" }}>
+        <button className="menubtn" style={{cursor: "pointer", border:"none",padding:"15px", borderRadius:"10px", backgroundColor:"#FFFFFF"}}><img src={Menu} alt="vector" className="ms-2" /></button>
 
           <div
             className="d-flex w-100 align-items-center p-3 rounded-3"
@@ -200,7 +200,7 @@ const [isActive, setIsActive] = useState(false);
             </div>
           )}
 
-            <button className="btnnn" style={{backgroundColor:"#018BCF", cursor:"pointer", border:"none", borderRadius:"2%"}}><img src={Sfilter} alt="vector" className="ms-2 p-2"  /></button>
+            <button className="menubtn" style={{cursor: "pointer", border:"none",padding:"15px", borderRadius:"10px", backgroundColor:"#018BCF"}}><img src={Sfilter} alt="vector" className="ms-2"  /></button>
         </div>
       </div>
     </div>
