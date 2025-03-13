@@ -35,7 +35,7 @@ const Pagination = ({ totalPages = 10 }) => {
         {[1, 2, 3].map((page) => (
           <button
             key={page}
-            className={`px-3 py-1 border rounded-lg ${
+            className={`px-3 py-1 border rounded-lg pagnumber ${
               currentPage === page ? "bg-red-300 text-white" : "text-gray-500"
             }`}
             onClick={() => goToPage(page)}

@@ -3,7 +3,10 @@
 }
 
 
-
+.max-width{
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .warning-banner-bgclr {
   background-color: #F4835F; /* Matching banner color */
   width: 100%;

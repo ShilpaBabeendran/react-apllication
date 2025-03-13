@@ -28,7 +28,7 @@ const Header = ()=>{
 
        {isVisible && (
         <div
-          className={`d-flex ${
+          className={`  d-flex w-100 ${
             isMobile ? "flex-column text-center" : "justify-content-center align-items-center"
           } text-white p-3 warning-banner-bgclr`}
         >

@@ -11,8 +11,12 @@
 .pagination{
     display: flex;
     justify-content: end;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    gap: 20%
     
+}
+.pagnumber{
+    gap: 2%;
 }
 
 .page-number-for-body{

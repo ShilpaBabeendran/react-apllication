@@ -1,6 +1,7 @@
 // import React from 'react';
 import React, { useState, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 // import "../footer.css";
 import "../../Components/FooterPage/footer.css";
 import ArrowRight from "../../assets/iconImages/arrow-right.png";
@@ -11,11 +12,12 @@ import Contact from "../../assets/iconImages/contact.png";
 import Rectangle from "../../assets/iconImages/rectangle.png";
 import Address from "../../assets/iconImages/address.png";
 import Call from "../../assets/iconImages/calling.png";
-import Downarrow from "../../assets/iconImages/down-arrow 2.jpg"
+import Downarrow from "../../assets/iconImages/choose.png";
 
 
 
 const Footer = ()=>{
+
 
 
 
@@ -102,7 +104,7 @@ const Footer = ()=>{
                 <div class="guide-icon"><img src={Rectangle} alt=''/></div>
                 <h3>Buyer’s guide</h3>
                 <p>The complete guide to locating and purchasing a home in Dubai</p>
-                <button>Download PDF file</button>
+                <button className="dwnld">Download PDF file</button>
             </div>
         </div>
 
@@ -159,7 +161,7 @@ const Footer = ()=>{
 
                 <div class="footer-bottom">
                     <div class="footer-links">
-                        <div class=" flex footer-links-section">  
+                        <div class=" d-flex footer-links-section" style={{gap:"1%"}}>  
                             <p href="">About us</p>
                             <p href="">Terms & Conditions</p>
                             <p href="">Private Policy</p>
@@ -167,12 +169,14 @@ const Footer = ()=>{
                     </div>
 
                     {/* <!-- Country Selector --> */}
-                    <div class="flex country-selector">
-                        <button class="dropdown" >CHOOSE </button>
-                        <div className='btn-img-footer'>
-                            <img src={Downarrow} alt=''/>
+                    <div class="d-flex country-selector">
+                        <div className='btn-img-footer ' style={{width:""}}>
+                            CHOOSE
+                        <button class="dropdown  " ><img src={Downarrow} alt=''/></button>
+                            
                         </div>
                     </div>
+                    
 
                     {/* <!-- Country Links --> */}
                     <div class="country-links">
@@ -195,7 +199,7 @@ const Footer = ()=>{
 
 
 
-
+           
 
 
 

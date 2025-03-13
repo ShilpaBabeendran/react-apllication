@@ -1,0 +1,45 @@
+/* body{
+    margin-left: 4%;
+    margin-right: 4%;
+} */
+
+.active{
+    background-color: #2E96C6;
+    color: #FFFFFF;
+}
+.df-tgbt-flx{
+    display: flex !important;
+      justify-content: space-between;
+      border-radius: 50px;
+  }
+
+  .rwa-djst{
+    margin-right: 4%;
+    margin-left: 5%;
+    
+  }
+  .w-a-c{
+    width: 12%
+  }
+
+  .price-wd-ad{
+    width: 12%;
+  }
+  .bttn{
+    /* width: 12%; */
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;;
+  }
+.mrgn{
+    display: flex;
+    flex-direction: column;
+}
+  
+
+
+
+
+  /* search */
+  

@@ -1,0 +1,62 @@
+
+
+
+.nav-child-abc p{
+    line-height: 10px;
+  }
+
+.nav-container{
+    box-shadow: 0 2px 4px 0px #B3B3B317;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.nav-child-abc{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    column-gap: 1px;
+}
+.abc-child{
+    font-family: 'Hind';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 4px;
+    color: #192E40;
+}
+.real-estate{
+    font-family: 'Hind';
+    font-weight: 300;
+    font-size: 8px;
+    color: #192E40;
+}
+.real-estate{
+    font-family: 'Hind';
+    font-weight: 300;
+    font-size: 8px;
+    color: #192E40;
+}
+.nav-child-menu {
+    display: flex;
+    padding: 10px;
+    font-family: 'Hind';
+    font-weight: 500;
+    font-size: 15px;
+    gap: 30px;
+    color: #45525E;
+    width: 70%;
+
+}
+.nav-child-btn {
+
+    border-radius: 58px;
+    background-color: #FEF8E7;
+    font-family: 'Hind';
+    font-size: 15px;
+    font-weight: 600;
+    color: #45525E;
+    padding: 15px;
+  }
