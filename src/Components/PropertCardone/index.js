@@ -1,5 +1,8 @@
 // import React from "react";
 import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import "../../Components/PropertCardone/cardone.css";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -32,54 +35,90 @@ import Map from "../../assets/iconImages/map.png"
 
 const PropertyCardone = () => {
 
+
+// saide bar
+
+const [selectedOption, setSelectedOption] = useState("Ready");
+
+
+const [openSections, setOpenSections] = useState({
+    completion: true,
+    propertyType: true,
+    furnished: true,
+    amenities: true,
+    bhk: true,
+    bathrooms: true,
+  });
+
+  const toggleSection = (section) => {
+    setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
+
+
+
+
+
+
+
+
+// property card section
+
+// social media buttons
+
     const [isNormal, setIsNormal] = useState(false);
     const [isHover, setIsHover] = useState(false);
     const [isClick, setIsClick] = useState(false);
 
 
-    const [isPressed, setIsPressed] = useState(false);
-        const [filters, setFilters] = useState({
-            premiumType: false,
-            apartmentsOnly: false,
-            readyMove: false,
-            individualHome: false,
-            TownHouse: false,
-            rentHouse: false,
-            furnishedProperty: false,
-            semiFurnished: false,
-            unFurnished: false,
-            parkingFacility: false,
-            securityFacility: false,
-            gasPipeline: false,
-            liftFacility: false,
-            powerBackup: false,
-            oneBhk: false,
-            twoBhk: false,
-            threeBhk: false,
-            fourBhk: false,
-            fiveBhk: false,
-            studioFacility: false,
-            completionStatus: "ready",
-            propertyType: [],
-            furnishedStatus: "furnished",
-            amenities: [],
-            bhkFacility: []
-        });
 
+
+//  button supperate event
+
+
+    const [activeButtons, setActiveButtons] = useState(Array(4).fill(false));
+  const [hoverIcons, setHoverIcons] = useState(Array(4).fill(false));
+  const [clickIcons, setClickIcons] = useState(Array(4).fill(false));
+
+  // Function to toggle WhatsApp button state for a specific index
+  const toggleWhatsApp = (index, value) => {
+    setActiveButtons((prevState) => {
+      const newState = [...prevState];
+      newState[index] = value;
+      return newState;
+    });
+  };
+
+  // Function to toggle Phone icon hover state for a specific index
+  const toggleHover = (index, value) => {
+    setHoverIcons((prevState) => {
+      const newState = [...prevState];
+      newState[index] = value;
+      return newState;
+    });
+  };
+
+  // Function to toggle Mail icon click state for a specific index
+  const toggleClick = (index, value) => {
+    setClickIcons((prevState) => {
+      const newState = [...prevState];
+      newState[index] = value;
+      return newState;
+    });
+  };
 
   return (
 
 
     <>
 
-    <div className="toarrangethebody d-flex justify-content-between property-body mt-3 " style={{marginLeft:"5%", marginRight:"5%"}}>
+    <div className="toarrangethebody d-flex justify-content-between property-body mt-3  " style={{marginLeft:"5%", marginRight:"5%"}}>
      {/* <div className=" d-flex justify-content-between property-body mt-3 d-none d-md-block " style={{marginLeft:"5%", marginRight:"5%"}}> */}
 
-            <div className= " property-card-parent d-none d-md-block rounded-4 "style={{backgroundColor:"#F1F1F399", width:"72%"}}>
+            <div className= " property-card-parent d-none d-md-block "style={{ width:"72%"}}>
 
                 {/* propwrty=card-1 */}
 
-                <div className=" d-flex   property-card ">
+                <div className=" d-flex rounded-4 property-cardone-body"style={{backgroundColor:"#F1F1F399"}}>
                     
                     {/* Property Image Section */}
 
@@ -105,7 +144,7 @@ const PropertyCardone = () => {
                     </div>
 
                                 {/* Property Details Section */}
-                    <div className="card-details">
+                    <div className="card-details p-4">
                         <div className=" flex top-details">
                             <div className= " details-address">
                                 <div className=" title-contact ">
@@ -134,7 +173,7 @@ const PropertyCardone = () => {
                                                 onMouseDown={() => setIsNormal(true)}
                                                 onMouseUp={() => setIsNormal(false)}
                                                 onMouseLeave={() => setIsNormal(false)}>
-                                                <img src={Whatsapp} alt="Whatsapp" className="me-2" /> WHAT’S APP
+                                                <img src={Whatsapp} alt="Whatsapp" className="me-2 cursor-pointer" /> WHAT’S APP
                                             </button>
 
                                     {/* Contact Icons */}
@@ -143,13 +182,13 @@ const PropertyCardone = () => {
                                                 onMouseDown={() => setIsHover(true)}
                                                 onMouseUp={() => setIsHover(false)}
                                                 onMouseLeave={() => setIsHover(false)}>
-                                                <img src={Phone} alt="phone" className="icon" />
+                                                <img src={Phone} alt="phone" className="icon cursor-pointer" />
                                             </div>
                                             <div className={`icon-box-card ${isClick ? "pressed" : ""}`}
                                                 onMouseDown={() => setIsClick(true)}
                                                 onMouseUp={() => setIsClick(false)}
                                                 onMouseLeave={() => setIsClick(false)}>
-                                                <img src={Mail} alt="mail" className="icon" />
+                                                <img src={Mail} alt="mail" className="icon cursor-pointer" />
                                             </div>
                                         </div>
                                     </div>                              
@@ -217,8 +256,8 @@ const PropertyCardone = () => {
                                 <div className="d-flex align-items-center  rounded p-3 me-2 facility">
                                     <img src={Parking} alt="car"   className="bi bi-car-front fs-4 me-2"/> Parking Available
                                 </div>
-                                <div className="">
-                                    <img src={RightArrow} alt="arrow"  className=""/>
+                                <div className="cursor-pointer">
+                                    <img src={RightArrow} alt="arrow"  className="cursor-pointer"/>
                                 </div>
                             </div>
                         </div>
@@ -229,22 +268,13 @@ const PropertyCardone = () => {
                 </div>
 
 
-
-
-
-
-
-
-
-
-
                 {/* property card 2 */}
 
-                <div className=" property-card-2 martop2p "style={{backgroundColor:"#F1F1F399"}}>
+                <div className=" property-card-2 martop2p rounded-4  ">
 
                     {[...Array(4)].map((_, index) => (
 
-                        <div key={index} className=" d-flex   property-card ">
+                        <div key={index} className=" d-flex rounded-4 mb-2 property-cardtwo-body  " style={{backgroundColor:"#F1F1F399"}}>
                                                 
                             {/* Property Image Section */}
 
@@ -294,29 +324,37 @@ const PropertyCardone = () => {
 
                                             <div className="button-container d-flex">
                                                     {/* WhatsApp Button */}
-                                                <button
-                                                    className={`whatsapp-btn ${isNormal ? "pressed" : ""}`}
-                                                    onMouseDown={() => setIsNormal(true)}
-                                                    onMouseUp={() => setIsNormal(false)}
-                                                    onMouseLeave={() => setIsNormal(false)}>
-                                                    <img src={Whatsapp} alt="Whatsapp" className="me-2" /> WHAT’S APP
-                                                </button>
+                                                    <div className="button-container d-flex">
+                                                        {/* WhatsApp Button */}
+                                                        <button
+                                                        className={`whatsapp-btn ${activeButtons[index] ? "pressed" : ""}`}
+                                                        onMouseDown={() => toggleWhatsApp(index, true)}
+                                                        onMouseUp={() => toggleWhatsApp(index, false)}
+                                                        onMouseLeave={() => toggleWhatsApp(index, false)}
+                                                        >
+                                                        <img src={Whatsapp} alt="Whatsapp" className="me-2 cursor-pointer" /> WHAT’S APP
+                                                        </button>
 
-                                                {/* Contact Icons */}
-                                                <div className="contact-icons">
-                                                    <div className={`icon-box ${isHover ? "pressed" : ""}`}
-                                                        onMouseDown={() => setIsHover(true)}
-                                                        onMouseUp={() => setIsHover(false)}
-                                                        onMouseLeave={() => setIsHover(false)}>
-                                                        <img src={Phone} alt="phone" className="icon" />
-                                                    </div>
-                                                    <div className={`icon-box ${isClick ? "pressed" : ""}`}
-                                                        onMouseDown={() => setIsClick(true)}
-                                                        onMouseUp={() => setIsClick(false)}
-                                                        onMouseLeave={() => setIsClick(false)}>
-                                                            <img src={Mail} alt="mail" className="icon" />
-                                                    </div>
-                                                </div>
+                                                        {/* Contact Icons */}
+                                                        <div className="contact-icons">
+                                                        <div
+                                                            className={`icon-box-card ${hoverIcons[index] ? "pressed" : ""}`}
+                                                            onMouseDown={() => toggleHover(index, true)}
+                                                            onMouseUp={() => toggleHover(index, false)}
+                                                            onMouseLeave={() => toggleHover(index, false)}
+                                                        >
+                                                            <img src={Phone} alt="phone" className="icon cursor-pointer" />
+                                                        </div>
+                                                        <div
+                                                            className={`icon-box-card ${clickIcons[index] ? "pressed" : ""}`}
+                                                            onMouseDown={() => toggleClick(index, true)}
+                                                            onMouseUp={() => toggleClick(index, false)}
+                                                            onMouseLeave={() => toggleClick(index, false)}
+                                                        >
+                                                            <img src={Mail} alt="mail" className="icon cursor-pointer" />
+                                                        </div>
+                                                        </div>
+                                                    </div>                                            
                                             </div>                              
                                         </div>
                                         
@@ -384,8 +422,8 @@ const PropertyCardone = () => {
                                         <div className="d-flex align-items-center  rounded p-3 me-2 facility">
                                             <img src={Parking} alt="car"   className="bi bi-car-front fs-4 me-2"/> Parking Available
                                         </div>
-                                        <div className="">
-                                            <img src={RightArrow} alt="arrow"  className=""/>
+                                        <div className="cursor-pointer">
+                                            <img src={RightArrow} alt="arrow"  className="cursor=pointer"/>
                                         </div>
                                     </div>
                                 </div>
@@ -407,250 +445,89 @@ const PropertyCardone = () => {
                     {/* said bar of body property */}
                     
 
-
-
-            <aside className="rigt-said-bar card-position-arrange d-none d-md-block rounded-4 " style={{backgroundColor:"#F1F1F399",width:"27%"}}>
-                <div className="right-said-content">
-                    {/* <div className="filter"> */}
-                    <div className=" d-flex justify-content-between g-3 font-head type-head">    
-                        <p className="filter-head">Filter</p>
-                        <img src={Filter} alt="filter" className="bafilterth-icont p-2" size={20}/>
-                    </div>
-                    <div className=" custom-checkbox-group">
-                        <div class="d-flex justify-content-between  form-check">
-                            <label class="form-check-lable ">Mark already seen </label>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input"  type="checkbox" role="switch"/>
-                            </div>
-                        </div>
-                            
-
-
-                        <div class="d-flex justify-content-between  form-check">
-                            <label class="form-check-lable">Properties with photos</label>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch"/>
-                            </div>
-                        </div>
-                    </div>
-                    {/* </div> */}
-
-
-
-                        {/* completion status */}
-                        {/* <div className=" font-head type-head"> */}
-                    <div className=" d-flex justify-content-between font-head type-head">
-                        <p className="completion">Completion Status</p>
-                        <img src={Downarrow} alt="arrow" className="arrow-icont p-3" size={20}/>
-                    </div>
-                    <div className=" custom-checkbox-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="propertyStatus" id="ready" checked/>
-                            <label class="form-check-label" for="ready">Ready</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="propertyStatus" id="offPlan"/>
-                            <label class="form-check-label" for="offPlan">Off-Plan</label>
-                        </div>
-                    </div>
-                    {/* </div> */}
-
-
-
-
-                    
-
-
-
-                    {/* property type */}
-                    <div className=" d-flex justify-content-between font-head type-head">
-                        <p className="completion">Property Type</p>
-                        <img src={Downarrow} alt="arrow" className="arrow-icont p-3" size={20}/>
-                    </div>
-                    <div class="custom-checkbox-group">
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="premium" checked/>
-                            <label class="form-check-label" for="premium">Premium</label>
-                        </div>
-
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="apartments"/>
-                            <label class="form-check-label" for="apartments">Apartments</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="readyToMove"/>
-                            <label class="form-check-label" for="readyToMove">Ready to move</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="individualHomes"/>
-                            <label class="form-check-label" for="individualHomes">Individual Homes</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="townhouse"/>
-                            <label class="form-check-label" for="townhouse">Townhouse</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="penthouse"/>
-                            <label class="form-check-label" for="penthouse">Penthouse</label>
-                        </div>
-                    </div>
-
-
-                    {/* furnished */}
-
-                    <div className=" d-flex justify-content-between font-head type-head">
-                        <p className="completion">Furnished Status</p>
-                        <img src={Downarrow} alt="arrow" className="arrow-icont p-3" size={20}/>
-                    </div>
-                    <div class="custom-checkbox-group">
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="premium" checked/>
-                            <label class="form-check-label" for="premium">Furnished</label>
-                        </div>
-
-                                
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="apartments"/>
-                            <label class="form-check-label" for="apartments">SemiFurnishe</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="readyToMove"/>
-                            <label class="form-check-label" for="readyToMove"> Unfurnished</label>
-                        </div>
-
-                    </div>
-
-
-                    {/* amenities */}
-
-                    {/* <div className="property-type"> */}
-                    <div className=" d-flex justify-content-between font-head type-head">
-                        <p className="completion">Amenities</p>
-                        <img src={Downarrow} alt="arrow" className="arrow-icont p-3" size={20}/>
-                    </div>
-                    <div class="custom-checkbox-group">
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="premium" checked/>
-                            <label class="form-check-label" for="premium">Parking Fcility</label>
-                        </div>
-
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="apartments"/>
-                            <label class="form-check-label" for="apartments">Gas Pipeline</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="readyToMove"/>
-                            <label class="form-check-label" for="readyToMove">Security </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="individualHomes"/>
-                            <label class="form-check-label" for="individualHomes">Lift Facility</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="townhouse"/>
-                            <label class="form-check-label" for="townhouse">Power backup</label>
-                        </div>
-
-                    </div>
-
-
-                        {/* BHK facility */}
-
-
-                        <div className=" d-flex justify-content-between font-head type-head">
-                            <p className="completion">BHK Facility</p>
-                            <img src={Downarrow} alt="arrow" className="arrow-icont p-3" size={20}/>
-                        </div>
-                        <div class="custom-checkbox-group">
-                            
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="premium" checked/>
-                                <label class="form-check-label" for="premium">1BHK</label>
-                            </div>
-
-                            
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="apartments"/>
-                                <label class="form-check-label" for="apartments">2BHK</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="readyToMove"/>
-                                <label class="form-check-label" for="readyToMove">3BHK </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="individualHomes"/>
-                                <label class="form-check-label" for="individualHomes">4BHK</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="townhouse"/>
-                                <label class="form-check-label" for="townhouse">5BHK</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="townhouse"/>
-                                <label class="form-check-label" for="townhouse">Studio</label>
-                            </div>
-
-                        </div>
-
-
-                        {/* bathrooms */}
-
-                        <div className=" d-flex justify-content-between font-head type-head">
-                                <p className="completion">Bathrooms</p>
-                                <img src={Downarrow} alt="arrow" className="arrow-icont p-3" size={20}/>
-                            </div>
-                            <div class="custom-checkbox-group">
-                                
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="premium" checked/>
-                                    <label class="form-check-label" for="premium">1</label>
-                                </div>
-
-                                
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="apartments"/>
-                                    <label class="form-check-label" for="apartments">2</label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="readyToMove"/>
-                                    <label class="form-check-label" for="readyToMove">3 </label>
-                                </div>
-                            </div>
-
-                    {/* </div> */}
-
-
+            <aside className="card-position-arrange d-none d-md-block rounded-4 p-3" style={{ backgroundColor: "#F1F1F399", width: "27%" }}>
+                <div className="d-flex justify-content-between font-head type-head">
+                    <p className="fw-bold fs-16 p-3">Filter</p>
+                    <img src={Filter} alt="filter" className="bafilterth-icont p-4"/>
                 </div>
-            </aside>
 
+                <div className="custom-checkbox-group p-3">
+                {/* Mark Already Seen */}
+                    <div className="d-flex justify-content-between align-items-center">
+                        <label htmlFor="seen" className="fs-14">Mark already seen</label>
+                        <Form.Check id="seen" type="switch" className="m-0" />
+                    </div>
 
+                    {/* Properties with Photos */}
+                    <div className="d-flex justify-content-between align-items-center mt-2">
+                        <label htmlFor="photos" className="fs-14">Properties with photos</label>
+                        <Form.Check id="photos" type="switch" className="m-0" />
+                    </div>
+                </div>
 
+                <div className="completion-status p-3">
+                <div className="d-flex justify-content-between align-items-center">
+                    <p className="fw-bold mb-0">Completion Status</p>
+                    <FontAwesomeIcon icon={faChevronDown} className="cursor-pointer" />
+                </div>
+                <hr />
+                <div className="custom-radio-group">
+                    <Form.Check
+                    type="radio"
+                    name="completionStatus"
+                    id="ready"
+                    label="Ready"
+                    value="Ready"
+                    checked={selectedOption === "Ready"}
+                    onChange={() => setSelectedOption("Ready")}
+                    className="custom-radio"
+                    />
+                    <Form.Check
+                    type="radio"
+                    name="completionStatus"
+                    id="offPlan"
+                    label="Off-Plan"
+                    value="Off-Plan"
+                    checked={selectedOption === "Off-Plan"}
+                    onChange={() => setSelectedOption("Off-Plan")}
+                    className="custom-radio"
+                    />
+                </div>
+                </div>
 
-
-
-
-
-
-
-            
-
+                {/* Collapsible Sections */}
+                {[
+                    { label: "Property Type", key: "propertyType", options: ["Premium", "Apartments", "Ready to move", "Individual Homes", "Townhouse", "Penthouse"] },
+                    { label: "Furnished Status", key: "furnished", options: ["Furnished", "SemiFurnished", "Unfurnished"] },
+                    { label: "Amenities", key: "amenities", options: ["Parking Facility", "Gas Pipeline", "Security", "Lift Facility", "Power backup"] },
+                    { label: "BHK Facility", key: "bhk", options: ["1BHK", "2BHK", "3BHK", "4BHK", "5BHK", "Studio"] },
+                    { label: "Bathrooms", key: "bathrooms", options: ["1", "2", "3"] },
+                ].map(({ label, key, options, type = "checkbox", name }) => (
+                    <div key={key} className="custom-radio-group">
+                    <div className="d-flex justify-content-between align-items-center font-head mt-3 type-head">
+                        <p className="fw-bold mb-0 p-3">{label}</p>
+                        <img src={Downarrow} alt="arrow"
+                        className="cursor-pointer "
+                        onClick={() => toggleSection(key)}
+                        />
+                    </div>
+                    {openSections[key] && (
+                        <div className="custom-check-group">
+                        {options.map((option, idx) => (
+                            <Form.Check
+                            key={idx}
+                            type={type}
+                            name={name}
+                            id={`${key}-${option}`}
+                            label={option}
+                            className=" mt-2 "
+                            />
+                        ))}
+                        </div>
+                    )}
+                    </div>
+                ))}
+                </aside>
 
 
 
@@ -781,8 +658,8 @@ const PropertyCardone = () => {
                                     <div className="d-flex align-items-center  rounded p-3 me-2 facility">
                                         <img src={Parking} alt="car"   className="bi bi-car-front fs-4 me-2"/> Parking Available
                                     </div>
-                                    <div className="">
-                                        <img src={RightArrow} alt="arrow"  className=""/>
+                                    <div className="cursor=pointer">
+                                        <img src={RightArrow} alt="arrow"  className="cursor=pointer"/>
                                     </div>
                                 </div>
                             </div>

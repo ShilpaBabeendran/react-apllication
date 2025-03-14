@@ -8,10 +8,13 @@
     display: flex;
     justify-content: space-between;
 
+
 }
 .image{
-    padding: 5PX;
-    align-items: center;
+    /* padding: 5PX; */
+    width: 40%;
+    height: 100%;
+    object-fit: cover; 
     
 }
 .img-top-bar {
@@ -403,6 +406,26 @@
     justify-content: center;
 
 }
+
+
+
+
+
+/* rdioactive color */
+
+.custom-radio-group .form-check-input:checked {
+    background-color: #F4835F !important;
+    border-color: #F4835F !important;
+  }
+/* check-active color */
+
+.custom-check-group .form-check-input:checked {
+    background-color: #12B28C !important;
+    border-color: #12B28C !important;
+  }
+
+
+
 
 
 @media only screen and (min-width: 768px) {

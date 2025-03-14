@@ -25,7 +25,7 @@ const BodyHead = ()=>{
             
         <div className=" absolute-center d-flex align-items-center map-view ">
             <div className="absolute-center mapp d-flex d-flex justify-content-between gap-2 border border-gray-300 text-gray-700 cursor-pointer  w-55 h-12">
-                <p>Mapp View </p>
+                <p className="mapviewtext align-item-center">Mapp View </p>
                 <Form.Check
                 type="switch"
                 id="mapViewSwitch"
@@ -36,13 +36,11 @@ const BodyHead = ()=>{
             </div>
             <div className="absolute-center mapp d-flex justify-content-between align-items-center gap-2 border border-gray-300 px-4   cursor-pointer w-48 h-12">
                 <p>Newest First</p>
-                <img className="" src={Charecter} alt="down-arrow"/>
+                <img className="" src={Charecter} alt="down-arrow" style={{cursor:"pointer"}}/>
             </div>
         </div>
     </div>
     
-
-
     
     </>
     
