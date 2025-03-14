@@ -451,8 +451,8 @@ const [openSections, setOpenSections] = useState({
                     <img src={Filter} alt="filter" className="bafilterth-icont p-4"/>
                 </div>
 
-                <div className="custom-checkbox-group p-3">
-                {/* Mark Already Seen */}
+                <div className="custom-checkbox-group p-3 ">
+                    {/* Mark Already Seen */}
                     <div className="d-flex justify-content-between align-items-center">
                         <label htmlFor="seen" className="fs-14">Mark already seen</label>
                         <Form.Check id="seen" type="switch" className="m-0" />
@@ -465,35 +465,35 @@ const [openSections, setOpenSections] = useState({
                     </div>
                 </div>
 
-                <div className="completion-status p-3">
-                <div className="d-flex justify-content-between align-items-center">
-                    <p className="fw-bold mb-0">Completion Status</p>
-                    <FontAwesomeIcon icon={faChevronDown} className="cursor-pointer" />
-                </div>
-                <hr />
-                <div className="custom-radio-group">
-                    <Form.Check
-                    type="radio"
-                    name="completionStatus"
-                    id="ready"
-                    label="Ready"
-                    value="Ready"
-                    checked={selectedOption === "Ready"}
-                    onChange={() => setSelectedOption("Ready")}
-                    className="custom-radio"
-                    />
-                    <Form.Check
-                    type="radio"
-                    name="completionStatus"
-                    id="offPlan"
-                    label="Off-Plan"
-                    value="Off-Plan"
-                    checked={selectedOption === "Off-Plan"}
-                    onChange={() => setSelectedOption("Off-Plan")}
-                    className="custom-radio"
-                    />
-                </div>
-                </div>
+                {/* <div className="completion-status p-3 "> */}
+                    <div className="d-flex justify-content-between align-items-center font-head type-head">
+                        <p className="fw-bold mb-0 p-3">Completion Status</p>
+                        <img src={Downarrow} alt="arrow cursor-pointer" />
+                    </div>
+                
+                    <div className="custom-radio-group">
+                        <Form.Check
+                        type="radio"
+                        name="completionStatus"
+                        id="ready"
+                        label="Ready"
+                        value="Ready"
+                        checked={selectedOption === "Ready"}
+                        onChange={() => setSelectedOption("Ready")}
+                        className="custom-radio mt-3 "
+                        />
+                        <Form.Check
+                        type="radio"
+                        name="completionStatus "
+                        id="offPlan"
+                        label="Off-Plan"
+                        value="Off-Plan"
+                        checked={selectedOption === "Off-Plan"}
+                        onChange={() => setSelectedOption("Off-Plan")}
+                        className="custom-radio"
+                        />
+                    </div>
+                {/* </div> */}
 
                 {/* Collapsible Sections */}
                 {[
