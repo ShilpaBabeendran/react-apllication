@@ -19,10 +19,11 @@
 }
 .img-top-bar {
     position: absolute;
-    top: 9%;
-    left: 5%;
-    gap: 2px
-    
+    top: 4%;
+    left: 3%;
+    gap: 2px;
+    width: 100vh;
+
 }
 .days{
     display: flex;
@@ -33,9 +34,11 @@
     font-family: "Hind";
     font-size: 12px;
     gap: 5px;
-    padding: 10px;
+    padding: 14px;
+    height: 3%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    width: 23%;
     
 }
 .headphone{
@@ -43,6 +46,8 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 10px;
+    /* height: 1%; */
+    width: 5%;
     
 }
 
@@ -51,8 +56,9 @@
     color: #FFFFFF;
     font-size: 12px;
     gap: 5px;
-    padding: 10px;
-    /* height: 25%; */
+    padding: 13px;
+    height: 3%;
+    width: 23%;
 }
 
 
@@ -118,13 +124,13 @@
 }
 
 .status{
-    padding: 1px;
-    gap: 25px;
+    paddings: 1px;
    
    }
 .spacing{
-    /* height: 24px; */
-    padding: 2px;
+    height: 24px;
+    margin-top: 2%;
+    padding: 1px;
     border-radius: 2PX;
     background-color: #CBCBCB;
     
@@ -255,13 +261,24 @@
     gap: 15px;
     padding: 15px;
 }
+.properties-facility-available{
+    width: 80vh;
+}
 .facility{
     background-color: #FFFFFF;
     border-radius: 8PX;
-    /* padding: 5PX; */
-    width: 150px;
-    height: 51px;
-    /* justify-content: center; */
+    width: 25%;
+    height: 52px;
+    font-family: "Hind";
+    font-size: 14px;
+    color: #45525E;
+}
+
+.parking{
+    background-color: #FFFFFF;
+    border-radius: 8PX;
+    width: 32%;
+    height: 52px;
     font-family: "Hind";
     font-size: 14px;
     color: #45525E;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import "../../Components/PropertyCardtwo/card.css";
-import Image from "../../assets/iconImages/card-img.png";
+// import Image from "../../assets/iconImages/card-img.png";
 
 import Time from "../../assets/iconImages/time.png";
 import headphn from "../../assets/iconImages/headphn.png";

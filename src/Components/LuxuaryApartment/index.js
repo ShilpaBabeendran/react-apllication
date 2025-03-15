@@ -32,10 +32,10 @@ const LuxuryApartments = () => {
             views, proximity to upscale neighborhoods, and convenient access to
             amenities such as shopping, dining, and cultural attractions.
           </p>
-          <ul className="list-unstyled">
-            <li>✔ Designer Finishes</li>
-            <li>✔ Spacious Layouts</li>
-          </ul>
+          <div className="list-unstyled">
+            <div className="desidn gap-2" ><img src={Tik} alt=""/> Designer Finishes</div>
+            <div><img src={Tik} alt=""/>  Spacious Layouts</div>
+          </div>
           <button className="btn btn-light mt-3">Explore Apartments</button>
         </div>
 
