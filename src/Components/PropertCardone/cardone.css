@@ -197,7 +197,7 @@
   
   .contact-icons {
     display: flex;
-    gap: 8px;
+    gap: 5px;
   }
   
   .icon-box-card {
@@ -317,11 +317,7 @@
 
 .rigt-said-bar{
     width: 23%;
-    /* gap: 20px; */
-    /* padding-left: 15px; */
-    /* margin-left: 15px; */
     float: right;
-    /* font-style: italic; */
     background-color: #F1F1F3;
     padding: 20px;
     border-radius: 10px;
@@ -330,6 +326,7 @@
 .right-said-content{
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     gap: 20px;
     /* line-height: 10px; */
 
@@ -390,9 +387,9 @@
 
 
 .rigt-said{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     width: 27%;
     height: 50%;
     background-color: #E5FBFF;
@@ -401,6 +398,8 @@
 
 
 .support-map{
+    display: flex;
+    justify-content: center;
     font-family: "Hind";
     font-size: 18px;
     color: #2E96C6;
